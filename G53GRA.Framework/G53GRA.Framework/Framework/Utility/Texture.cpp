@@ -54,10 +54,13 @@ Texture::~Texture(void)
 // Loads a bitmap into texture memory
 int Texture::GetTexture(string fileName)
 {
-	//for ()
-	//{
-	//	textures
-	//}
+	for (map<int, string>::iterator ii = textures.begin(); ii != textures.end(); ++ii)
+	{
+		if (ii->second == fileName)
+		{
+			return ii->first;
+		}
+	}
 
 	BITMAPFILEHEADER fileHeader;
 	BITMAPINFOHEADER infoHeader;
