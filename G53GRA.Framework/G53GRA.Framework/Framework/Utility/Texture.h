@@ -12,7 +12,7 @@
 class Texture
 {
 public:
-	Texture(void);
+	Texture(void){};
 	~Texture(void);
 
 	/** Loads a texture into memory and returns the id of the texture object created */

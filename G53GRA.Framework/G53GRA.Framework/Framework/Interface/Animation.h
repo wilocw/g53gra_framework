@@ -17,5 +17,5 @@ public:
 	* Use this to update animation sequence.
 	* @param deltaTime change in time since previous call
 	*/
-	virtual void Update(const double& deltaTime) = 0; 
+	virtual void Update(const double& deltaTime) = 0;
 };
