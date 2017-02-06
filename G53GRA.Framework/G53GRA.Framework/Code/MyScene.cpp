@@ -1,6 +1,6 @@
 #include "MyScene.h"
 
-#include "Demos\Triangle.h"
+#include "Demos\Triforce\Triforce.h"
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight)
@@ -12,7 +12,7 @@ void MyScene::Initialise()
 {
 	glClearColor(0.f, 0.f, 0.f, 1.f);
 	
-	Triangle *t = new Triangle();
+	Triforce *t = new Triforce();
 	AddObjectToScene(t);
 
 }
