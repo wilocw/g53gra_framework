@@ -70,7 +70,6 @@ int Texture::GetTexture(string fileName)
 	{
 		printf("Error: Failed to open the file at path %s\n", fileName.c_str());
 		delete[] bitmapFile;
-		//delete pixelBuffer;
 		return -1;	// error
 	}
 	fread(&fileHeader, 14, 1, bitmapFile);
@@ -81,7 +80,6 @@ int Texture::GetTexture(string fileName)
 		printf("Error: Trying to load %s it is in an invalid bitmap format.\n", fileName.c_str());
 		fclose(bitmapFile);
 		delete[] bitmapFile;
-		//delete[] pixelBuffer;
 		return -1;	// error
 	}
 
@@ -94,7 +92,6 @@ int Texture::GetTexture(string fileName)
 		printf("Error: Trying to load %s.\nThe file is not in RGB or RGBA format.\nIt may be in grayscale format, open it in an image editor of your choice and change the image mode to RGB or RGBA.\n", fileName.c_str());
 		fclose(bitmapFile);
 		delete[] bitmapFile;
-		//delete[] pixelBuffer;
 		return -1;	// error
 	}
 

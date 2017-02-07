@@ -113,7 +113,9 @@ void Scene::HandleKey(unsigned char key, int state, int x, int y)
 	// State is 1 for key press, 0 for key release
 
 	if (key == 27 && state) // Check for escape key pressed
-			exit(0); // EXIT ON ESCAPE PRESS
+	{
+		exit(0); // EXIT ON ESCAPE PRESS
+	}
 
 	Input* input_obj;
 	camera.HandleKey(key, state, x, y);
