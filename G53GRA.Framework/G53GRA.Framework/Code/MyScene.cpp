@@ -10,7 +10,7 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
 
 void MyScene::Initialise()
 {
-	glClearColor(0.f, 0.f, 0.f, 1.f);
+	glClearColor(static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(1.0f));
 	
 	Triangle *t = new Triangle();
 	AddObjectToScene(t);
@@ -19,5 +19,5 @@ void MyScene::Initialise()
 
 void MyScene::Projection()
 {
-	gluPerspective(60.0, (GLdouble)windowWidth / (GLdouble)windowHeight, 1.0, 1000.0);
+	gluPerspective(static_cast<GLdouble>(60.0), static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight), static_cast<GLdouble>(1.0), static_cast<GLdouble>(1000.0));
 }
