@@ -10,8 +10,8 @@
  * @author wil
  */
 #include "Engine.h"		//! Superclass for accessing OpenGL/Context windowing
-#include "Texture.h"	//! Handles Texture loading for bitmap images
-#include "Camera.h"     //! Camera class
+#include "../Utility/Texture.h"	//! Handles Texture loading for bitmap images
+#include "../Utility/Camera.h"  //! Camera class
 #include <vector>		//! Utility for maintaining DispalyableObjects in system
 
 class DisplayableObject; // Anonymous
@@ -30,18 +30,20 @@ public:
 	/** Return window height */
 	static int GetWindowHeight();
 	/**
-	 * Input a .bmp bitmap image to bind to internal texture buffer 
+	 * Input a .bmp bitmap image to bind to internal texture buffer
 	 * @returns textureID
 	 * @params fileName the name of the texture file you want to input
 	 */
 	static int GetTexture(std::string fileName);
 	/** Returns a pointer to the Camera */
-	static Camera* GetCamera() { return &camera; }
+	static Camera* GetCamera() {
+		return &camera;
+	}
 
 protected:
 	/**
 	* This must be overloaded this to add {@link DisplayableObject}s to your
-	* scene. 
+	* scene.
 	* @see #Projection()
 	*/
 	virtual void Initialise() = 0;

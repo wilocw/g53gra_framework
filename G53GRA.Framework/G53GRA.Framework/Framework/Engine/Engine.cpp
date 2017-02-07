@@ -1,25 +1,20 @@
 #include "Engine.h"
 #include <string>
 
-Engine *Engine::current         = 0;
+Engine *Engine::current = 0;
 const char* Engine::windowTitle = "";
-int Engine::windowID            = 0;
-int Engine::windowWidth         = 0;
-int Engine::windowHeight		= 0;
-int Engine::time                = 0;
+int Engine::windowID = 0;
+int Engine::windowWidth = 0;
+int Engine::windowHeight = 0;
+int Engine::time = 0;
 
 Engine::Engine(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 {
-	Engine::windowWidth  = windowWidth;
+	Engine::windowWidth = windowWidth;
 	Engine::windowHeight = windowHeight;
-	Engine::windowTitle  = title;
+	Engine::windowTitle = title;
 
 	glutInit(&argc, argv);
-}
-
-
-Engine::~Engine()
-{
 }
 
 void Engine::Run()
@@ -56,7 +51,7 @@ void Engine::Run()
 void Engine::InitFunc()
 {
 	// Default background colour
-	glClearColor(0.f, 0.f, 0.f, 1.f);
+	glClearColor(static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(1.0f));
 
 	// Enable depth testing
 	glEnable(GL_DEPTH_TEST);
@@ -64,7 +59,7 @@ void Engine::InitFunc()
 
 	// Enable backface culling
 	glEnable(GL_CULL_FACE);
-	
+
 	// Enable transparency blending
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -79,22 +74,22 @@ void Engine::InitFunc()
 	glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_FALSE);
 
 	// set the ambient light model
-    GLfloat global_ambient[] = { 0.2f, 0.2f, 0.2f, 1.0f };
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, global_ambient);
-    
-    // enable directional light lighting
-    // (x, y, z, 0.0) -> directional lighting
-    // (x, y, z, 1.0) -> positional lighting
-    glEnable(GL_LIGHTING);
-    GLfloat ambience[] = { 0.2f, 0.2f, 0.2f, 1.0f };
-    GLfloat diffuse[] = { 0.8f, 0.8f, 0.8f, 1.0f };
-    GLfloat specular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-    GLfloat position[] = { 1.0f, 1.0f, 1.0f, 0.0f };
-    glLightfv(GL_LIGHT0, GL_AMBIENT, ambience);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-    glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
-    glLightfv(GL_LIGHT0, GL_POSITION, position);
-    glEnable(GL_LIGHT0);
+	GLfloat global_ambient[] = {0.2f, 0.2f, 0.2f, 1.0f};
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, global_ambient);
+
+	// enable directional light lighting
+	// (x, y, z, 0.0) -> directional lighting
+	// (x, y, z, 1.0) -> positional lighting
+	glEnable(GL_LIGHTING);
+	GLfloat ambience[] = {0.2f, 0.2f, 0.2f, 1.0f};
+	GLfloat diffuse[] = {0.8f, 0.8f, 0.8f, 1.0f};
+	GLfloat specular[] = {1.0f, 1.0f, 1.0f, 1.0f};
+	GLfloat position[] = {1.0f, 1.0f, 1.0f, 0.0f};
+	glLightfv(GL_LIGHT0, GL_AMBIENT, ambience);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
+	glLightfv(GL_LIGHT0, GL_POSITION, position);
+	glEnable(GL_LIGHT0);
 
 	// Enable smooth shading from lighting
 	glShadeModel(GL_SMOOTH);
@@ -139,7 +134,7 @@ void Engine::SpecialKeyDownFunc(int key, int x, int y)
 void Engine::SpecialKeyUpFunc(int key, int x, int y)
 {
 	current->HandleSpecialKey(key, 0, x, y);
-	
+
 }
 
 void Engine::MouseFunc(int button, int state, int x, int y)
@@ -160,9 +155,9 @@ void Engine::PassiveMouseMotionFunc(int x, int y)
 void Engine::IdleFunc()
 {
 	// Get elapsed time (milliseconds)
-	int t = glutGet(GLUT_ELAPSED_TIME); 
+	int t = glutGet(GLUT_ELAPSED_TIME);
 	// Calculate difference in seconds between previous and current call 
-	double diff = (double)(t - time) / 1000.0;
+	double diff = (double) (t - time) / 1000.0;
 	time = t;
 	// Call Update methods
 	current->Update(diff);
@@ -176,7 +171,7 @@ int Engine::CheckGLError()
 	GLenum error = glGetError();
 	while (GL_NO_ERROR != error)
 	{
-		e++;
+		++e;
 		printf("GL Error %i: %s\n", e, gluErrorString(error));
 		error = glGetError();
 	}

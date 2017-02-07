@@ -11,7 +11,7 @@ class Triangle :
 {
 public:
 	Triangle();
-	~Triangle();
+	~Triangle(){};
 
 	void Display();
 	void Update(const double& deltaTime);
