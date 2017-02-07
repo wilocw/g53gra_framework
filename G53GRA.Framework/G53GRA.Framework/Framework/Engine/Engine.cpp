@@ -157,7 +157,7 @@ void Engine::IdleFunc()
 	// Get elapsed time (milliseconds)
 	int t = glutGet(GLUT_ELAPSED_TIME);
 	// Calculate difference in seconds between previous and current call 
-	double diff = (double) (t - time) / 1000.0;
+	double diff = (static_cast<double>(t) - static_cast<double>(time)) / 1000.0;
 	time = t;
 	// Call Update methods
 	current->Update(diff);
