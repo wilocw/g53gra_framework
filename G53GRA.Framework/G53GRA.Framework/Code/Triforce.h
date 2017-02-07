@@ -9,7 +9,7 @@ class Triforce :
 {
 public:
 	Triforce();
-	~Triforce();
+	~Triforce(){};
 
 	// Override the DisplayableObject's Draw function
 	void Display();

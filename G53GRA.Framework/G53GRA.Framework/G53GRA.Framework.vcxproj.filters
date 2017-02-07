@@ -33,10 +33,7 @@
     <ClCompile Include="Code\MyScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Code\Triangle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Code\Demos\Triforce\Triforce.cpp">
+    <ClCompile Include="Code\Triforce.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,10 +65,10 @@
     <ClInclude Include="Code\MyScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Code\Triangle.h">
+    <ClInclude Include="Code\Demos\Triangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Code\Demos\Triforce\Triforce.h">
+    <ClInclude Include="Code\Triforce.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

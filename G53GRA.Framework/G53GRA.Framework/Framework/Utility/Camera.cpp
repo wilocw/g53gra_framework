@@ -144,8 +144,8 @@ void Camera::HandleMouseDrag(int x, int y)
 
 	// work out the difference between where the mouse was last used (mouseX, mouseY) to
 	// position the view direction and the current position (x, y) the mouse is in
-	rx = (float) (x - mouseX);
-	ry = (float) (y - mouseY);
+	rx = static_cast<float>(x - mouseX);
+	ry = static_cast<float>(y - mouseY);
 
 	// switch on which button was pressed and only do the update if the left button was pressed
 	switch (currentButton)
