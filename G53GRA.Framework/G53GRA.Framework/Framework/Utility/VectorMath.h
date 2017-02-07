@@ -7,7 +7,7 @@
 // result stored in a
 inline void scale(float* a, const float& scale)
 {
-	for (int i = 0; i<3; i++, a++)
+	for (int i = 0; i < 3; i++, a++)
 		*a = *a*scale;
 }
 
@@ -16,7 +16,7 @@ inline void scale(float* a, const float& scale)
 // Result is stored in vector a
 inline void add(float* a, const float* b, const float& scale = 1.0f)
 {
-	for (int i = 0; i<3; i++)
+	for (int i = 0; i < 3; i++)
 		*a++ += scale * (*b++);
 }
 
@@ -25,7 +25,7 @@ inline void add(float* a, const float* b, const float& scale = 1.0f)
 // Result is stored in vector a
 inline void sub(float* a, const float* b, const float& scale = 1.0f)
 {
-	for (int i = 0; i<3; i++)
+	for (int i = 0; i < 3; i++)
 		*a++ -= scale * (*b++);
 }
 
@@ -36,12 +36,12 @@ inline void norm(float* n)
 {
 	float l = 0.0f;
 
-	for (int i = 0; i<3; i++)
+	for (int i = 0; i < 3; i++)
 		l += n[i] * n[i];
 
 	l = sqrt(l);
 
-	for (int i = 0; i<3; i++)
+	for (int i = 0; i < 3; i++)
 		n[i] /= l;
 }
 

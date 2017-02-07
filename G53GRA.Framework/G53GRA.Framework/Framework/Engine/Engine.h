@@ -1,10 +1,10 @@
 #pragma once
 
 #ifdef _WIN32
-	#include <GL/glut.h>
-	#include <Windows.h>
+#include <GL/glut.h>
+#include <Windows.h>
 #else
-	#include <GLUT/glut.h>
+#include <GLUT/glut.h>
 #endif
 /**
   * Base Engine for the framework. Handles windowing and freeglut/OpenGL contexts.
@@ -17,7 +17,7 @@ public:
 	* Constructor takes in command line arguments, a title and initial window dimensions.
 	*/
 	Engine(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight);
-	virtual ~Engine();
+	virtual ~Engine(){};
 	/**
 	 * Initial startup method. Sets up GL context and windowing functions to handle drawing, timing and input.
 	 */
@@ -69,15 +69,15 @@ protected:
 	static void PassiveMouseMotionFunc(int x, int y);
 
 	// Pure virtual functions handled overloaded by Scene
-	virtual void Initialise()                                          = 0;
-	virtual void Draw()                                                = 0;
-	virtual void Reshape(int w, int h)                                 = 0;
-	virtual void Update(const double&)                                 = 0;
+	virtual void Initialise() = 0;
+	virtual void Draw() = 0;
+	virtual void Reshape(int w, int h) = 0;
+	virtual void Update(const double&) = 0;
 	virtual void HandleKey(unsigned char key, int state, int x, int y) = 0;
-	virtual void HandleSpecialKey(int key, int state, int x, int y)    = 0;
-	virtual void HandleMouse(int button, int state, int x, int y)      = 0;
-	virtual void HandleMouseDrag(int x, int y)                         = 0;
-	virtual void HandleMouseMove(int x, int y)                         = 0;
+	virtual void HandleSpecialKey(int key, int state, int x, int y) = 0;
+	virtual void HandleMouse(int button, int state, int x, int y) = 0;
+	virtual void HandleMouseDrag(int x, int y) = 0;
+	virtual void HandleMouseMove(int x, int y) = 0;
 
 	/**
 	 * Iterates through OpenGL error list and dumps error information to console.

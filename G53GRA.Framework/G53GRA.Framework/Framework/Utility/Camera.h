@@ -1,13 +1,13 @@
 #pragma once
 
 #ifdef _WIN32
-	#include <GL/glut.h>
-	#include <Windows.h>
+#include <GL/glut.h>
+#include <Windows.h>
 #else
-	#include <GLUT/glut.h>
+#include <GLUT/glut.h>
 #endif
 
-#include "Input.h"
+#include "../Interface/Input.h"
 /**
 * This class implements the base Camera functionality. It controls the position and view direction
 * of the camera in your {@link Scene}. You may add functionality by creating a new class that inherits
@@ -21,7 +21,7 @@ class Camera : public Input
 public:
 	/** Constructor for {@link Camera} to set up viewing properties in rendering window */
 	Camera();
-	~Camera();
+	virtual ~Camera(){};
 
 	// These functions can be called to get the position/view direction/camera axis of the camera in world space
 	void GetEyePosition(float &x, float &y, float &z) const;
@@ -34,7 +34,7 @@ public:
 	* Update the position of the camera and look-at vectors based on keyboard input.
 	* @param deltaTime change in time since previous call (unused)
 	*/
-	void Update(const double& deltaTime);
+	virtual void Update(const double& deltaTime);
 
 	/**
 	* Resets {@link Camera} vectors to default values. Sets position of camera at (0,0) in x,y-plane
@@ -43,9 +43,9 @@ public:
 	* <p>
 	* {@code width} and {@code height} refer to the window size of {@code Scene} {@link #parent}.
 	*/
-	void Reset();
+	virtual void Reset();
 	/** Sets the window viewport of the scene */
-	void SetViewport();
+	virtual void SetViewport();
 
 	/**
 	* Captures input from {@code wasd}-keys used for camera movement.
@@ -53,7 +53,7 @@ public:
 	* Spacebar {@linkplain #reset() reset}s the camera.
 	*/
 	void HandleKey(unsigned char key, int state, int x, int y);
-	void HandleSpecialKey(int key, int state, int x, int y); // unused at present
+	void HandleSpecialKey(int key, int state, int x, int y){}; // unused at present
 
 	/**
 	* Captures button click. Sets button to 0 if last mouse button is released.
@@ -69,7 +69,7 @@ public:
 	* @see #HandleMouse(int, int, int, int)
 	*/
 	void HandleMouseDrag(int x, int y);
-	void HandleMouseMove(int x, int y); // unused at preset
+	void HandleMouseMove(int x, int y){}; // unused at preset
 
 	/**
 	* Called by {@link Scene} to position camera.
@@ -79,7 +79,7 @@ public:
 	* @see #Update(float)
 	* @see #Reset()
 	*/
-	void SetupCamera();
+	virtual void SetupCamera();
 
 private:
 	/**
@@ -106,7 +106,7 @@ private:
 	 * so that we can do an update in the Update() function rather than HandleKey
 	 * function to obtain smooth motion */
 	int wKey, sKey, aKey, dKey;
-	
+
 	/** Current rendering window dimensions */
 	int windowWidth, windowHeight;
 

@@ -15,9 +15,9 @@ public:
 	 * <p> Initialises position, size and orientation to origin in World Space.
 	 */
 	DisplayableObject(){
-		position(0.f, 0.f, 0.f);
-		size(1.f);
-		orientation(0.f, 0.f, 0.f);
+		position(0.0f, 0.0f, 0.0f);
+		size(1.0f);
+		orientation(0.0f, 0.0f, 0.0f);
 	};
 	virtual ~DisplayableObject(void){};
 	/**
@@ -26,15 +26,17 @@ public:
 	* Must be overloaded by your DisplayableObject subclass. Contains all rendering commands.
 	*/
 	virtual void Display() = 0;
-    /** set World Space position */
-	void position(float x, float y, float z){ 
+	/** set World Space position */
+	void position(float x, float y, float z){
 		pos[0] = x;
 		pos[1] = y;
 		pos[2] = z;
 	}
 	/** set size in World Space (single value) */
-	void size(float s){ size(s, s, s); }
-	/** set size in World Space (seperate axes) */
+	void size(float s){
+		size(s, s, s);
+	}
+/** set size in World Space (seperate axes) */
 	void size(float sx, float sy, float sz){
 		scale[0] = sx;
 		scale[1] = sy;
@@ -46,12 +48,18 @@ public:
 		rotation[1] = ry;
 		rotation[2] = rz;
 	}
-    /** Get size in World Space */
-	float* size(){ return scale; } 
-	/** Get orientation in World Space */
-	float* orientation(){ return rotation; }
-	/** Get World Space position */
-	float* position(){ return pos; }
+	/** Get size in World Space */
+	float* size(){
+		return scale;
+	}
+/** Get orientation in World Space */
+	float* orientation(){
+		return rotation;
+	}
+/** Get World Space position */
+	float* position(){
+		return pos;
+	}
 
 protected:
 	/** float[] containing World Space position coordinates */
