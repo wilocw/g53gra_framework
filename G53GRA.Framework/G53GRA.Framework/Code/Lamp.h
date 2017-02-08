@@ -16,7 +16,7 @@ class Lamp :
 {
 public:
 	Lamp();
-	~Lamp();
+	~Lamp(){};
 
 	void Display();
 	void Update(const double& deltaTime);
@@ -35,7 +35,7 @@ private:
 	float interpA;              // variable to hold what the first keyframe angle is
 	float interpB;              // variable to hold what the second keyframe angle is
 	float interpTime;           // variable to track how long the keyframe lasts i.e. how long do we have
-	// to move from interpA to interpB
+								// to move from interpA to interpB
 
 };
 

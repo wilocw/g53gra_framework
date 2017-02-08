@@ -7,7 +7,7 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
 {
 	// Create and add a new lamp to the scene
 	Lamp *l = new Lamp();
-	l->size(6.f);
+	l->size(6.0f);
 	AddObjectToScene(l);
 }
 
@@ -19,5 +19,6 @@ void MyScene::Initialise()
 
 void MyScene::Projection()
 {
-	gluPerspective(static_cast<GLdouble>(60.0), static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight), static_cast<GLdouble>(1.0), static_cast<GLdouble>(1000.0));
+	gluPerspective(static_cast<GLdouble>(60.0), static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight), 
+				   static_cast<GLdouble>(1.0), static_cast<GLdouble>(1000.0));
 }

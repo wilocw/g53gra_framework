@@ -1,5 +1,6 @@
 /**
-* Entry file to framework. Should not edit this file, though to change window size, adjust parameters in creastion of new scene
+* Entry file to framework. Should not edit this file, though to change window
+* size, adjust parameters in creastion of new scene
 * <p>
 * {@code new MyScene(argc, argv, "title", (const int)width, (const int)height)}
 * @author wil
@@ -7,14 +8,17 @@
 */
 #include "MyScene.h"
 /**
- * Entry method, takes command line arguments and creates new Scene engine to render your G53GRA Coursework
+ * Entry method, takes command line arguments and creates new Scene engine to
+ * render your G53GRA Coursework
  *
  * @see MyScene
- * @param argc,argv (number of) command line arguments passed to OpenGL windowing context
+ * @param argc,argv (number of) command line arguments passed to OpenGL
+ * windowing context
  */
 int main(int argc, char* argv[])
 {
-	// Create new instance of MyScene - the OpenGL context on which your coursework is built
+	// Create new instance of MyScene - the OpenGL context on which your 
+	// coursework is built
 	MyScene *scene = NULL;
 	scene = new MyScene(argc, argv, "G53GRA", static_cast<const int>(600), static_cast<const int>(400));
 
