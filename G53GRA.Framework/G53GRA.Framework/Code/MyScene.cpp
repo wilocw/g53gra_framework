@@ -1,6 +1,7 @@
 #include "MyScene.h"
 
 #include "Triangle.h"
+#include "Floor.h"
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight){}
@@ -10,8 +11,13 @@ void MyScene::Initialise()
 	// set the background colour of the scene to black
 	glClearColor(static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(1.0f));
 
-	// Create a new triangle object and add it to the list of objects
+	// DEMO 5
+	// Show floor and triangle
+	Floor *f = new Floor();
 	Triangle *t = new Triangle();
+	f->size(100.f);
+	t->size(0.5f);
+	AddObjectToScene(f);
 	AddObjectToScene(t);
 }
 

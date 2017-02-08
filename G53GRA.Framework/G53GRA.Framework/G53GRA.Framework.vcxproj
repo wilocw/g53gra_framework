@@ -7,6 +7,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Code\Floor.cpp" />
     <ClCompile Include="Code\Triangle.cpp" />
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\MyScene.cpp" />
@@ -16,6 +17,7 @@
     <ClCompile Include="Framework\Utility\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\Floor.h" />
     <ClInclude Include="Code\Triangle.h" />
     <ClInclude Include="Code\MyScene.h" />
     <ClInclude Include="Framework\Engine\Engine.h" />
