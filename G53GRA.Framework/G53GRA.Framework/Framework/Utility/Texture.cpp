@@ -54,6 +54,14 @@ Texture::~Texture(void)
 // Loads a bitmap into texture memory
 int Texture::GetTexture(string fileName)
 {
+	for (map<int, string>::iterator ii = textures.begin(); ii != textures.end(); ++ii)
+	{
+		if (ii->second == fileName)
+		{
+			return ii->first;
+		}
+	}
+
 	BITMAPFILEHEADER fileHeader;
 	BITMAPINFOHEADER infoHeader;
 	unsigned char *pixelBuffer;
@@ -74,7 +82,6 @@ int Texture::GetTexture(string fileName)
 	{
 		printf("Error: Trying to load %s it is in an invalid bitmap format.\n", fileName.c_str());
 		fclose(bitmapFile);
-		delete[] bitmapFile;
 		return -1;	// error
 	}
 
@@ -86,7 +93,6 @@ int Texture::GetTexture(string fileName)
 	{
 		printf("Error: Trying to load %s.\nThe file is not in RGB or RGBA format.\nIt may be in grayscale format, open it in an image editor of your choice and change the image mode to RGB or RGBA.\n", fileName.c_str());
 		fclose(bitmapFile);
-		delete[] bitmapFile;
 		return -1;	// error
 	}
 
@@ -130,9 +136,9 @@ int Texture::GetTexture(string fileName)
 
 	// Upload texture data
 	glTexImage2D(GL_TEXTURE_2D, static_cast<GLint>(0), infoHeader.biBitCount == 32 ? GL_RGBA : GL_RGB,
-				 static_cast<GLsizei>(infoHeader.biWidth), static_cast<GLsizei>(infoHeader.biHeight),
-				 static_cast<GLint>(0), infoHeader.biBitCount == 32 ? GL_RGBA : GL_BGR_EXT, GL_UNSIGNED_BYTE,
-				 static_cast<GLvoid*>(pixelBuffer));
+		static_cast<GLsizei>(infoHeader.biWidth), static_cast<GLsizei>(infoHeader.biHeight),
+		static_cast<GLint>(0), infoHeader.biBitCount == 32 ? GL_RGBA : GL_BGR_EXT, GL_UNSIGNED_BYTE,
+		static_cast<GLvoid*>(pixelBuffer));
 
 	// insert texture into texture list
 	textures.insert(textures.end(), pair<int, string>(static_cast<int>(texObject), fileName));
@@ -140,7 +146,6 @@ int Texture::GetTexture(string fileName)
 	// Delete old copy of pixel data
 	delete[] pixelBuffer;
 	fclose(bitmapFile);
-	delete[] bitmapFile;
 	glDisable(GL_TEXTURE_2D);
 
 	return static_cast<int>(texObject);
