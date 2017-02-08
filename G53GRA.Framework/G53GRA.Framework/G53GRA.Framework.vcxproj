@@ -7,6 +7,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Code\Lamp.cpp" />
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\MyScene.cpp" />
     <ClCompile Include="Framework\Engine\Engine.cpp" />
@@ -15,6 +16,8 @@
     <ClCompile Include="Framework\Utility\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\Lamp.h" />
+    <ClInclude Include="Code\LampMesh.h" />
     <ClInclude Include="Code\MyScene.h" />
     <ClInclude Include="Framework\Engine\Engine.h" />
     <ClInclude Include="Framework\Engine\Scene.h" />
