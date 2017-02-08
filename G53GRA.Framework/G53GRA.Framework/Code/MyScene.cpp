@@ -5,16 +5,16 @@
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight)
 {
-	// Create and add a new lamp to the scene
-	Lamp *l = new Lamp();
-	l->size(6.0f);
-	AddObjectToScene(l);
+	
 }
 
 void MyScene::Initialise()
 {
 	glClearColor(static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(1.0f));
-
+	// Create and add a new lamp to the scene
+	Lamp *l = new Lamp();
+	l->size(6.0f);
+	AddObjectToScene(l);
 }
 
 void MyScene::Projection()
