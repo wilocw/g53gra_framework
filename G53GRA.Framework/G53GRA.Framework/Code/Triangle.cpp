@@ -26,18 +26,18 @@ void Triangle::Display()
 	// joined into one triangle verticies we pass get
 	glBegin(GL_TRIANGLES);
 
-	// set the colour of the first vertex
-	glColor3f(1.0f, 0.0f, 0.0f);
+	// set the colour of the first vertex (8-bit RGB)
+	glColor3ub(255, 0, 0); // [3ub] unsigned byte x 3 = 0-255
 	// set the position of the first vertex
 	glVertex3d(static_cast<float>(-Scene::GetWindowWidth()) / 3.0f, -Scene::GetWindowHeight() / 4.0f, -2.0);
 
-	// set the colour of the second vertex
-	glColor3f(0.0f, 1.0f, 0.0f);
+	// set the colour of the second vertex (normalised RGB)
+	glColor3f(0.0f, 1.0f, 0.0f); // [3f] float x 3 = 0.0f-1.0f
 	// set the position of the second vertex
 	glVertex3d(static_cast<float>(Scene::GetWindowWidth()) / 3.0f, -Scene::GetWindowHeight() / 4.0f, -2.0f);
 
-	// set the colour of the third vertex
-	glColor3f(0.0f, 0.0f, 1.0f);
+	// set the colour of the third vertex (normalised RGBA)
+	glColor4f(0.0f, 0.0f, 1.0f, 1.0f); // [4f] float x 4 = 0.0f-1.0f
 	// set the position of the third vertex
 	glVertex3d(0.0, Scene::GetWindowHeight() / 3.0f, -2.0f);
 
