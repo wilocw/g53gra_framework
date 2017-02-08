@@ -29,7 +29,7 @@ void Triangle::Display()
 	// set the colour of the first vertex (8-bit RGB)
 	glColor3ub(255, 0, 0); // [3ub] unsigned byte x 3 = 0-255
 	// set the position of the first vertex
-	glVertex3f(static_cast<float>(-Scene::GetWindowWidth()) / 3.0f, -Scene::GetWindowHeight() / 4.0f, -2.0);
+	glVertex3f(static_cast<float>(-Scene::GetWindowWidth()) / 3.0f, static_cast<float>(-Scene::GetWindowHeight()) / 4.0f, -2.0);
 
 	// set the colour of the second vertex (normalised RGB)
 	glColor3f(0.0f, 1.0f, 0.0f); // [3f] float x 3 = 0.0f-1.0f
