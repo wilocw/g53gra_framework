@@ -15,7 +15,7 @@ void MyScene::Initialise()
 	// Show floor and triangle
 	Floor *f = new Floor();
 	Triangle *t = new Triangle();
-	f->size(100.f);
+	f->size(100.0f);
 	t->size(0.5f);
 	AddObjectToScene(f);
 	AddObjectToScene(t);

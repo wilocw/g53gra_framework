@@ -5,8 +5,8 @@ class Floor :
 	public DisplayableObject
 {
 public:
-	Floor();
-	~Floor();
+	Floor(){};
+	~Floor(){};
 
 	void Display();
 

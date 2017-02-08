@@ -27,19 +27,19 @@ void Triangle::Display()
 	glBegin(GL_TRIANGLES);
 
 	// set the colour of the first vertex
-	glColor3ub(255, 0, 0);
+	glColor3f(1.0f, 0.0f, 0.0f);
 	// set the position of the first vertex
-	glVertex3d(-Scene::GetWindowWidth() / 3, -Scene::GetWindowHeight() / 4, -2.0);
+	glVertex3d(static_cast<float>(-Scene::GetWindowWidth()) / 3.0f, static_cast<float>(-Scene::GetWindowHeight()) / 4.0f, -2.0f);
 
 	// set the colour of the second vertex
-	glColor3f(0, 1.0, 0);
+	glColor3f(0.0f, 1.0f, 0.0f);
 	// set the position of the second vertex
-	glVertex3d(Scene::GetWindowWidth() / 3, -Scene::GetWindowHeight() / 4, -2.0);
+	glVertex3f(static_cast<float>(Scene::GetWindowWidth()) / 3.0f, static_cast<float>(-Scene::GetWindowHeight()) / 4.0f, -2.0f);
 
 	// set the colour of the third vertex
-	glColor3ub(0, 0, 255);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	// set the position of the third vertex
-	glVertex3d(0.0, Scene::GetWindowHeight() / 3, -2.0);
+	glVertex3f(0.0f, static_cast<float>(Scene::GetWindowHeight()) / 3.0f, -2.0f);
 
 	// stop drawing triangles
 	glEnd();
