@@ -5,6 +5,7 @@
 #endif
 #include <map>
 #include <string>
+#include <gl/GLUT.h>
 
 /**
  * Class for loading bitmap files into texture buffer and handling texture IDs
@@ -20,4 +21,19 @@ public:
 
 private:
 	std::map<int, std::string> textures;
+	
+	int CheckGLError()
+	{
+		int e = 0;
+		GLenum error = glGetError();
+		while (GL_NO_ERROR != error)
+		{
+			++e;
+			printf("GL Error %i: %s\n", e, gluErrorString(error));
+			error = glGetError();
+		}
+
+		return e;
+	}
+
 };

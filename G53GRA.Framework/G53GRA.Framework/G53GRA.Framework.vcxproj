@@ -7,15 +7,25 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Code\Floor.cpp" />
+    <ClCompile Include="Code\Link.cpp" />
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\MyScene.cpp" />
+    <ClCompile Include="Code\SunLight.cpp" />
+    <ClCompile Include="Code\TexturedCube.cpp" />
+    <ClCompile Include="Code\Water.cpp" />
     <ClCompile Include="Framework\Engine\Engine.cpp" />
     <ClCompile Include="Framework\Engine\Scene.cpp" />
     <ClCompile Include="Framework\Utility\Camera.cpp" />
     <ClCompile Include="Framework\Utility\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\Floor.h" />
+    <ClInclude Include="Code\Link.h" />
     <ClInclude Include="Code\MyScene.h" />
+    <ClInclude Include="Code\SunLight.h" />
+    <ClInclude Include="Code\TexturedCube.h" />
+    <ClInclude Include="Code\Water.h" />
     <ClInclude Include="Framework\Engine\Engine.h" />
     <ClInclude Include="Framework\Engine\Scene.h" />
     <ClInclude Include="Framework\Interface\Animation.h" />
@@ -24,6 +34,10 @@
     <ClInclude Include="Framework\Utility\Camera.h" />
     <ClInclude Include="Framework\Utility\Texture.h" />
     <ClInclude Include="Framework\Utility\VectorMath.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Textures\linkSpriteSheet.bmp" />
+    <Image Include="Textures\water.bmp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CE3A8304-475E-425E-BA11-FDAA6293C905}</ProjectGuid>

@@ -45,6 +45,8 @@ void Engine::Run()
 	printf("Setup complete. Window created [%dx%d]\n", windowWidth, windowHeight);
 	printf("OpenGL version: %s\n", glGetString(GL_VERSION));
 
+	CheckGLError();
+
 	glutMainLoop();
 }
 
