@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1908B84A1E4CB87A006C895B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1908B8491E4CB87A006C895B /* GLUT.framework */; };
 		1908B84C1E4CB87F006C895B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1908B84B1E4CB87F006C895B /* OpenGL.framework */; };
+		192BE3BB1E4CBD650040131F /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3B71E4CBD650040131F /* Engine.cpp */; };
+		192BE3BC1E4CBD650040131F /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3B91E4CBD650040131F /* Scene.cpp */; };
+		192BE3C51E4CBD8B0040131F /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C01E4CBD8B0040131F /* Camera.cpp */; };
+		192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C21E4CBD8B0040131F /* Texture.cpp */; };
+		192BE3CA1E4CBD960040131F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C71E4CBD960040131F /* main.cpp */; };
+		192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C81E4CBD960040131F /* MyScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +31,23 @@
 
 /* Begin PBXFileReference section */
 		1908B83C1E4CB814006C895B /* G53GRA.Framework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = G53GRA.Framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1908B8461E4CB862006C895B /* Framework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Framework; sourceTree = SOURCE_ROOT; };
-		1908B8471E4CB86A006C895B /* Code */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Code; sourceTree = SOURCE_ROOT; };
 		1908B8491E4CB87A006C895B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		1908B84B1E4CB87F006C895B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		192BE3B71E4CBD650040131F /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Engine.cpp; path = Framework/Engine/Engine.cpp; sourceTree = SOURCE_ROOT; };
+		192BE3B81E4CBD650040131F /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = Framework/Engine/Engine.h; sourceTree = SOURCE_ROOT; };
+		192BE3B91E4CBD650040131F /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = Framework/Engine/Scene.cpp; sourceTree = SOURCE_ROOT; };
+		192BE3BA1E4CBD650040131F /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = Framework/Engine/Scene.h; sourceTree = SOURCE_ROOT; };
+		192BE3BD1E4CBD790040131F /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animation.h; path = Framework/Interface/Animation.h; sourceTree = SOURCE_ROOT; };
+		192BE3BE1E4CBD790040131F /* DisplayableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayableObject.h; path = Framework/Interface/DisplayableObject.h; sourceTree = SOURCE_ROOT; };
+		192BE3BF1E4CBD790040131F /* Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Input.h; path = Framework/Interface/Input.h; sourceTree = SOURCE_ROOT; };
+		192BE3C01E4CBD8B0040131F /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Framework/Utility/Camera.cpp; sourceTree = SOURCE_ROOT; };
+		192BE3C11E4CBD8B0040131F /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Framework/Utility/Camera.h; sourceTree = SOURCE_ROOT; };
+		192BE3C21E4CBD8B0040131F /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = Framework/Utility/Texture.cpp; sourceTree = SOURCE_ROOT; };
+		192BE3C31E4CBD8B0040131F /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = Framework/Utility/Texture.h; sourceTree = SOURCE_ROOT; };
+		192BE3C41E4CBD8B0040131F /* VectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VectorMath.h; path = Framework/Utility/VectorMath.h; sourceTree = SOURCE_ROOT; };
+		192BE3C71E4CBD960040131F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Code/main.cpp; sourceTree = SOURCE_ROOT; };
+		192BE3C81E4CBD960040131F /* MyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyScene.cpp; path = Code/MyScene.cpp; sourceTree = SOURCE_ROOT; };
+		192BE3C91E4CBD960040131F /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyScene.h; path = Code/MyScene.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +83,8 @@
 		1908B83E1E4CB814006C895B /* G53GRA.Framework */ = {
 			isa = PBXGroup;
 			children = (
-				1908B8471E4CB86A006C895B /* Code */,
-				1908B8461E4CB862006C895B /* Framework */,
+				192BE3B31E4CBD3B0040131F /* Framework */,
+				192BE3B21E4CBD290040131F /* Code */,
 			);
 			path = G53GRA.Framework;
 			sourceTree = "<group>";
@@ -77,6 +96,59 @@
 				1908B8491E4CB87A006C895B /* GLUT.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		192BE3B21E4CBD290040131F /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				192BE3C71E4CBD960040131F /* main.cpp */,
+				192BE3C81E4CBD960040131F /* MyScene.cpp */,
+				192BE3C91E4CBD960040131F /* MyScene.h */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		192BE3B31E4CBD3B0040131F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				192BE3B61E4CBD580040131F /* Engine */,
+				192BE3B51E4CBD490040131F /* Interface */,
+				192BE3B41E4CBD440040131F /* Utility */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		192BE3B41E4CBD440040131F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				192BE3C01E4CBD8B0040131F /* Camera.cpp */,
+				192BE3C11E4CBD8B0040131F /* Camera.h */,
+				192BE3C21E4CBD8B0040131F /* Texture.cpp */,
+				192BE3C31E4CBD8B0040131F /* Texture.h */,
+				192BE3C41E4CBD8B0040131F /* VectorMath.h */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		192BE3B51E4CBD490040131F /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				192BE3BD1E4CBD790040131F /* Animation.h */,
+				192BE3BE1E4CBD790040131F /* DisplayableObject.h */,
+				192BE3BF1E4CBD790040131F /* Input.h */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		192BE3B61E4CBD580040131F /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				192BE3B71E4CBD650040131F /* Engine.cpp */,
+				192BE3B81E4CBD650040131F /* Engine.h */,
+				192BE3B91E4CBD650040131F /* Scene.cpp */,
+				192BE3BA1E4CBD650040131F /* Scene.h */,
+			);
+			name = Engine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192BE3BC1E4CBD650040131F /* Scene.cpp in Sources */,
+				192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */,
+				192BE3C51E4CBD8B0040131F /* Camera.cpp in Sources */,
+				192BE3CA1E4CBD960040131F /* main.cpp in Sources */,
+				192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */,
+				192BE3BB1E4CBD650040131F /* Engine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
