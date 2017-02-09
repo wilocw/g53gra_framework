@@ -12,8 +12,6 @@
  * render your G53GRA Coursework
  *
  * @see MyScene
- * @param argc,argv (number of) command line arguments passed to OpenGL
- * windowing context
  */
 int main(int argc, char* argv[])
 {
