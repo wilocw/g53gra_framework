@@ -15,6 +15,7 @@
 		192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C21E4CBD8B0040131F /* Texture.cpp */; };
 		192BE3CA1E4CBD960040131F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C71E4CBD960040131F /* main.cpp */; };
 		192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C81E4CBD960040131F /* MyScene.cpp */; };
+		19BBD1241E4CC3660059AE2F /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19BBD1221E4CC3660059AE2F /* Triangle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,8 @@
 		192BE3C71E4CBD960040131F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Code/main.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C81E4CBD960040131F /* MyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyScene.cpp; path = Code/MyScene.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C91E4CBD960040131F /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyScene.h; path = Code/MyScene.h; sourceTree = SOURCE_ROOT; };
+		19BBD1221E4CC3660059AE2F /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Triangle.cpp; path = Code/Triangle.cpp; sourceTree = SOURCE_ROOT; };
+		19BBD1231E4CC3660059AE2F /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Triangle.h; path = Code/Triangle.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		192BE3B21E4CBD290040131F /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				19BBD1221E4CC3660059AE2F /* Triangle.cpp */,
+				19BBD1231E4CC3660059AE2F /* Triangle.h */,
 				192BE3C71E4CBD960040131F /* main.cpp */,
 				192BE3C81E4CBD960040131F /* MyScene.cpp */,
 				192BE3C91E4CBD960040131F /* MyScene.h */,
@@ -211,6 +216,7 @@
 				192BE3BC1E4CBD650040131F /* Scene.cpp in Sources */,
 				192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */,
 				192BE3C51E4CBD8B0040131F /* Camera.cpp in Sources */,
+				19BBD1241E4CC3660059AE2F /* Triangle.cpp in Sources */,
 				192BE3CA1E4CBD960040131F /* main.cpp in Sources */,
 				192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */,
 				192BE3BB1E4CBD650040131F /* Engine.cpp in Sources */,
