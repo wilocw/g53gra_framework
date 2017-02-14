@@ -35,7 +35,9 @@ private:
 	void Palm();
 	void Finger(const unsigned char finger);
 	void Thumb();
-	void SubFinger(float _bendAngle);
+	void SubFinger(float bendAngle);
+	void Skeleton();
+	void SubSkeleton(float bendAngle);
 
 	void FlexThumb();
 	void FlexFinger(const unsigned char finger);

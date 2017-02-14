@@ -33,8 +33,10 @@ void Hands::Display()
 
 	glPushAttrib(GL_ALL_ATTRIB_BITS);
 
-	//glScalef(0.8f, 1.5f, 1.0f);
+	glColor3ub(128, 255, 128);
 
+	if (_flagWireFrame) Skeleton();
+	
 	Palm();
 	glPushMatrix();
 		glTranslatef(-2.25f, 2.5f, 0.0f);
@@ -81,15 +83,13 @@ void Hands::Palm()
 	glPushMatrix();
 		glScalef(4.5f, 4.5f, 1.0f);
 
-		glColor3ub(128, 255, 128);
-
 		_flagWireFrame ? glutWireCube(1.0f) : glutSolidCube(1.0f);
 	glPopMatrix();
 }
 
 void Hands::Finger(const unsigned char finger)
 {
-	unsigned short jID = finger*_JOINTS_PER_FINGER;
+	const unsigned char jID = finger*_JOINTS_PER_FINGER;
 
 	glScalef(1.0f, 1.8f, 1.0f);
 
@@ -127,6 +127,131 @@ void Hands::SubFinger(float bendAngle)
 	_flagWireFrame ? glutWireCube(1.0f) : glutSolidCube(1.0f);
 
 	glTranslatef(0.0f, 0.5f, 0.0f);
+}
+
+void Hands::Skeleton()
+{
+	glPushAttrib(GL_ALL_ATTRIB_BITS);
+	glLineWidth(3.0f);
+	glEnable(GL_LINE_SMOOTH);
+	glColor3ub(255, 128, 128);
+
+	glPushMatrix();
+	
+	glBegin(GL_LINES);
+		glVertex3f(0.0f, -2.5f, 0.0f);
+		glVertex3f(-2.25f+0.75f*0.5f, 2.5f, 0.0f);
+	glEnd();
+
+	glPushMatrix();
+
+		glTranslatef(-2.25f, 2.5f, 0.0f);
+		glScalef(0.75f, 0.75f, 0.75f);
+		glScalef(1.0f, 1.8f, 1.0f);
+		glTranslatef(0.5f, 0.0f, 0.0f);
+
+		SubSkeleton(_jointAngles[_FINGER_LITTLE*_JOINTS_PER_FINGER]);
+		
+		SubSkeleton(_jointAngles[_FINGER_LITTLE*_JOINTS_PER_FINGER + 1]);
+
+		glScalef(1.0f, 0.8f, 1.0f);
+		SubSkeleton(_jointAngles[_FINGER_LITTLE*_JOINTS_PER_FINGER + 2]);
+		
+	glPopMatrix();
+		
+	glBegin(GL_LINES);
+		glVertex3f(0.0f, -2.5f, 0.0f);
+		glVertex3f(-1.15f + 0.9f*0.5f, 2.5f, 0.0f);
+	glEnd();
+
+	glPushMatrix();
+
+		glTranslatef(-1.15f, 2.5f, 0.0f);
+		glScalef(0.9f, 0.9f, 0.9f);
+		glScalef(1.0f, 1.8f, 1.0f);
+		glTranslatef(0.5f, 0.0f, 0.0f);
+
+		SubSkeleton(_jointAngles[_FINGER_RING*_JOINTS_PER_FINGER]);
+
+		SubSkeleton(_jointAngles[_FINGER_RING*_JOINTS_PER_FINGER + 1]);
+
+		glScalef(1.0f, 0.8f, 1.0f);
+		SubSkeleton(_jointAngles[_FINGER_RING*_JOINTS_PER_FINGER + 2]);
+
+	glPopMatrix();
+	
+	glBegin(GL_LINES);
+		glVertex3f(0.0f, -2.5f, 0.0f);
+		glVertex3f(-0.05f + 0.5f, 2.5f, 0.0f);
+	glEnd();
+
+	glPushMatrix();
+
+		glTranslatef(-0.05f, 2.5f, 0.0f);
+		glScalef(1.0f, 1.8f, 1.0f);
+		glTranslatef(0.5f, 0.0f, 0.0f);
+
+		SubSkeleton(_jointAngles[_FINGER_MIDDLE*_JOINTS_PER_FINGER]);
+
+		SubSkeleton(_jointAngles[_FINGER_MIDDLE*_JOINTS_PER_FINGER + 1]);
+
+		glScalef(1.0f, 0.8f, 1.0f);
+		SubSkeleton(_jointAngles[_FINGER_MIDDLE*_JOINTS_PER_FINGER + 2]);
+
+	glPopMatrix();
+
+	glBegin(GL_LINES);
+		glVertex3f(0.0f, -2.5f, 0.0f);
+		glVertex3f(1.05f + 0.9f*0.5f, 2.5f, 0.0f);
+	glEnd();
+
+	glPushMatrix();
+
+		glTranslatef(1.05f, 2.5f, 0.0f);
+		glScalef(0.9f, 0.9f, 0.9f);
+		glScalef(1.0f, 1.8f, 1.0f);
+		glTranslatef(0.5f, 0.0f, 0.0f);
+
+		SubSkeleton(_jointAngles[_FINGER_INDEX*_JOINTS_PER_FINGER]);
+
+		SubSkeleton(_jointAngles[_FINGER_INDEX*_JOINTS_PER_FINGER + 1]);
+
+		glScalef(1.0f, 0.8f, 1.0f);
+		SubSkeleton(_jointAngles[_FINGER_INDEX*_JOINTS_PER_FINGER + 2]);
+
+	glPopMatrix();
+
+	glBegin(GL_LINES);
+		glVertex3f(0.0f, -2.5f, 0.0f);
+		glVertex3f(2.25f, -1.25f, 0.0f);
+	glEnd();
+
+	glTranslatef(2.25f, -1.25f, 0.0f);
+
+	glScalef(1.2f, 1.5f, 1.0f);
+
+	glRotatef(-45.0f, 0.0f, 0.0f, 1.0f);
+
+	SubSkeleton(_jointAngles[12]);
+
+	SubSkeleton(_jointAngles[13]);
+
+
+	glPopMatrix();
+	glPopAttrib();
+	float lw;
+	glGetFloatv(GL_LINE_WIDTH, &lw);
+	printf("lw: %2.1f\n", lw);
+}
+
+void Hands::SubSkeleton(float bendAngle)
+{
+	glRotatef(bendAngle, 1.0f, 0.0f, 0.0f);
+	glBegin(GL_LINES);
+		glVertex3f(0.0f, 0.0f, 0.0f);
+		glVertex3f(0.0f, 1.0f, 0.0f);
+	glEnd();
+	glTranslatef(0.0f, 1.0f, 0.0f);
 }
 
 void Hands::Update(const double& deltaTime)
@@ -272,7 +397,7 @@ void Hands::FlexThumb()
 void Hands::FlexFinger(const unsigned char finger)
 {
 	const float MAX_FLEX[_JOINTS_PER_FINGER] = { 45.0f, 90.0f, 45.0f };
-	const unsigned char i = _JOINTS_PER_FINGER*finger;
+	const unsigned char jID = _JOINTS_PER_FINGER*finger;
 	switch (_keyframe)
 	{
 	case 2:
@@ -280,37 +405,37 @@ void Hands::FlexFinger(const unsigned char finger)
 	case 4:
 	case 5:
 	case 7:
-		if (_jointAngles[i] < MAX_FLEX[0])
+		if (_jointAngles[jID] < MAX_FLEX[0])
 		{
-			_jointAngles[i] = 3.0f * _animateRotation*MAX_FLEX[0];
-			if (_jointAngles[i] > MAX_FLEX[0]) _jointAngles[i] = MAX_FLEX[0];
+			_jointAngles[jID] = 3.0f * _animateRotation*MAX_FLEX[0];
+			if (_jointAngles[jID] > MAX_FLEX[0]) _jointAngles[jID] = MAX_FLEX[0];
 		}
-		else if (_jointAngles[i + 1] < MAX_FLEX[1])
+		else if (_jointAngles[jID + 1] < MAX_FLEX[1])
 		{
-			_jointAngles[i + 1] = 3.0f * (_animateRotation - (1.0f / 3.0f))*MAX_FLEX[1];
-			if (_jointAngles[i + 1] > MAX_FLEX[1]) _jointAngles[i + 1] = MAX_FLEX[1];
+			_jointAngles[jID + 1] = 3.0f * (_animateRotation - (1.0f / 3.0f))*MAX_FLEX[1];
+			if (_jointAngles[jID + 1] > MAX_FLEX[1]) _jointAngles[jID + 1] = MAX_FLEX[1];
 		}
-		else if (_jointAngles[i + 2] < MAX_FLEX[2])
+		else if (_jointAngles[jID + 2] < MAX_FLEX[2])
 		{
-			_jointAngles[i + 2] = 3.0f * (_animateRotation - (2.0f / 3.0f))*MAX_FLEX[2];
-			if (_jointAngles[i + 2] > MAX_FLEX[2]) _jointAngles[i + 2] = MAX_FLEX[2];
+			_jointAngles[jID + 2] = 3.0f * (_animateRotation - (2.0f / 3.0f))*MAX_FLEX[2];
+			if (_jointAngles[jID + 2] > MAX_FLEX[2]) _jointAngles[jID + 2] = MAX_FLEX[2];
 		}
 		break;
 	case 6:
-		if (_jointAngles[i + 2] > 0.0f)
+		if (_jointAngles[jID + 2] > 0.0f)
 		{
-			_jointAngles[i + 2] = (1.0f - 3.0f * _animateRotation)*MAX_FLEX[2];
-			if (_jointAngles[i + 2] < 0.0f) _jointAngles[i + 2] = 0.0f;
+			_jointAngles[jID + 2] = (1.0f - 3.0f * _animateRotation)*MAX_FLEX[2];
+			if (_jointAngles[jID + 2] < 0.0f) _jointAngles[jID + 2] = 0.0f;
 		}
-		else if (_jointAngles[i + 1] > 0.0f)
+		else if (_jointAngles[jID + 1] > 0.0f)
 		{
-			_jointAngles[i + 1] = 2.0f * (1.0f - (3.0f / 2.0f)*_animateRotation)*MAX_FLEX[1];
-			if (_jointAngles[i + 1] < 0.0f) _jointAngles[i + 1] = 0.0f;
+			_jointAngles[jID + 1] = 2.0f * (1.0f - (3.0f / 2.0f)*_animateRotation)*MAX_FLEX[1];
+			if (_jointAngles[jID + 1] < 0.0f) _jointAngles[jID + 1] = 0.0f;
 		}
-		else if (_jointAngles[i] > 0.0f)
+		else if (_jointAngles[jID] > 0.0f)
 		{
-			_jointAngles[i] = 3.0f * (1.0f - _animateRotation)*MAX_FLEX[0];
-			if (_jointAngles[i] < 0.0f) _jointAngles[i] = 0.0f;
+			_jointAngles[jID] = 3.0f * (1.0f - _animateRotation)*MAX_FLEX[0];
+			if (_jointAngles[jID] < 0.0f) _jointAngles[jID] = 0.0f;
 		}
 		break;
 	}

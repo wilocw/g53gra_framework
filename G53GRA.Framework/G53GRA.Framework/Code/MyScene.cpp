@@ -18,12 +18,12 @@ void MyScene::Initialise()
 	rh->size(25.f);
 	rh->position(100.0f, -50.0f, -10.f);
 	rh->orientation(0.0f, -30.0f, 0.0f);
-	rh->ToggleAnimation();
 	rh->SetAnimationControl('u');
 
 	lh->size(25.f);
 	lh->position(-100.f, -50.0f, -10.f);
 	lh->orientation(0.0f, 30.0f, 0.0f);
+	lh->ToggleAnimation();
 	lh->ToggleWireFrame();
 	lh->ToggleHandedness();
 	lh->SetAnimationControl('y');
