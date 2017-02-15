@@ -15,6 +15,8 @@
 		192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C21E4CBD8B0040131F /* Texture.cpp */; };
 		192BE3CA1E4CBD960040131F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C71E4CBD960040131F /* main.cpp */; };
 		192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C81E4CBD960040131F /* MyScene.cpp */; };
+		19DD07D41E54925A0023BFB5 /* Planet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19DD07D01E54925A0023BFB5 /* Planet.cpp */; };
+		19DD07D51E54925A0023BFB5 /* Planet2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19DD07D21E54925A0023BFB5 /* Planet2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +50,10 @@
 		192BE3C71E4CBD960040131F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Code/main.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C81E4CBD960040131F /* MyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyScene.cpp; path = Code/MyScene.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C91E4CBD960040131F /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyScene.h; path = Code/MyScene.h; sourceTree = SOURCE_ROOT; };
+		19DD07D01E54925A0023BFB5 /* Planet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Planet.cpp; path = Code/Planet.cpp; sourceTree = SOURCE_ROOT; };
+		19DD07D11E54925A0023BFB5 /* Planet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Planet.h; path = Code/Planet.h; sourceTree = SOURCE_ROOT; };
+		19DD07D21E54925A0023BFB5 /* Planet2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Planet2.cpp; path = Code/Planet2.cpp; sourceTree = SOURCE_ROOT; };
+		19DD07D31E54925A0023BFB5 /* Planet2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Planet2.h; path = Code/Planet2.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 		192BE3B21E4CBD290040131F /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				19DD07D01E54925A0023BFB5 /* Planet.cpp */,
+				19DD07D11E54925A0023BFB5 /* Planet.h */,
+				19DD07D21E54925A0023BFB5 /* Planet2.cpp */,
+				19DD07D31E54925A0023BFB5 /* Planet2.h */,
 				192BE3C71E4CBD960040131F /* main.cpp */,
 				192BE3C81E4CBD960040131F /* MyScene.cpp */,
 				192BE3C91E4CBD960040131F /* MyScene.h */,
@@ -210,8 +220,10 @@
 			files = (
 				192BE3BC1E4CBD650040131F /* Scene.cpp in Sources */,
 				192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */,
+				19DD07D51E54925A0023BFB5 /* Planet2.cpp in Sources */,
 				192BE3C51E4CBD8B0040131F /* Camera.cpp in Sources */,
 				192BE3CA1E4CBD960040131F /* main.cpp in Sources */,
+				19DD07D41E54925A0023BFB5 /* Planet.cpp in Sources */,
 				192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */,
 				192BE3BB1E4CBD650040131F /* Engine.cpp in Sources */,
 			);
