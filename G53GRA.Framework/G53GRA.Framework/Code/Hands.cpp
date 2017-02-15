@@ -239,9 +239,6 @@ void Hands::Skeleton()
 
 	glPopMatrix();
 	glPopAttrib();
-	float lw;
-	glGetFloatv(GL_LINE_WIDTH, &lw);
-	printf("lw: %2.1f\n", lw);
 }
 
 void Hands::SubSkeleton(float bendAngle)
