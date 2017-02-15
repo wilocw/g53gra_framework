@@ -13,7 +13,8 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
 
 void MyScene::Initialise()
 {
-	glClearColor(static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(1.0f));
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    
 	// DEMO 10 (Animated Texturing)
 #ifdef __APPLE__
 	Link *link = new Link(10.0f, 25.0f, "./linkSpriteSheet.bmp");

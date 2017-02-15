@@ -15,17 +15,26 @@
 		192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C21E4CBD8B0040131F /* Texture.cpp */; };
 		192BE3CA1E4CBD960040131F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C71E4CBD960040131F /* main.cpp */; };
 		192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C81E4CBD960040131F /* MyScene.cpp */; };
+		196B9D141E54960500F5495F /* Floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 196B9D131E54960500F5495F /* Floor.cpp */; };
+		196B9D181E54960F00F5495F /* Link.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 196B9D161E54960F00F5495F /* Link.cpp */; };
+		196B9D1F1E54961900F5495F /* SunLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 196B9D191E54961900F5495F /* SunLight.cpp */; };
+		196B9D201E54961900F5495F /* TexturedCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 196B9D1B1E54961900F5495F /* TexturedCube.cpp */; };
+		196B9D211E54961900F5495F /* Water.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 196B9D1D1E54961900F5495F /* Water.cpp */; };
+		196B9D251E54973C00F5495F /* linkSpriteSheet.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 196B9D231E5496F200F5495F /* linkSpriteSheet.bmp */; };
+		196B9D261E54973C00F5495F /* water.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 196B9D241E5496F200F5495F /* water.bmp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1908B83A1E4CB814006C895B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = .;
+			dstSubfolderSpec = 7;
 			files = (
+				196B9D251E54973C00F5495F /* linkSpriteSheet.bmp in CopyFiles */,
+				196B9D261E54973C00F5495F /* water.bmp in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -48,6 +57,18 @@
 		192BE3C71E4CBD960040131F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Code/main.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C81E4CBD960040131F /* MyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyScene.cpp; path = Code/MyScene.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C91E4CBD960040131F /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyScene.h; path = Code/MyScene.h; sourceTree = SOURCE_ROOT; };
+		196B9D131E54960500F5495F /* Floor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Floor.cpp; path = Code/Floor.cpp; sourceTree = SOURCE_ROOT; };
+		196B9D151E54960F00F5495F /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Floor.h; path = Code/Floor.h; sourceTree = SOURCE_ROOT; };
+		196B9D161E54960F00F5495F /* Link.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Link.cpp; path = Code/Link.cpp; sourceTree = SOURCE_ROOT; };
+		196B9D171E54960F00F5495F /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Link.h; path = Code/Link.h; sourceTree = SOURCE_ROOT; };
+		196B9D191E54961900F5495F /* SunLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SunLight.cpp; path = Code/SunLight.cpp; sourceTree = SOURCE_ROOT; };
+		196B9D1A1E54961900F5495F /* SunLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunLight.h; path = Code/SunLight.h; sourceTree = SOURCE_ROOT; };
+		196B9D1B1E54961900F5495F /* TexturedCube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TexturedCube.cpp; path = Code/TexturedCube.cpp; sourceTree = SOURCE_ROOT; };
+		196B9D1C1E54961900F5495F /* TexturedCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TexturedCube.h; path = Code/TexturedCube.h; sourceTree = SOURCE_ROOT; };
+		196B9D1D1E54961900F5495F /* Water.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Water.cpp; path = Code/Water.cpp; sourceTree = SOURCE_ROOT; };
+		196B9D1E1E54961900F5495F /* Water.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Water.h; path = Code/Water.h; sourceTree = SOURCE_ROOT; };
+		196B9D231E5496F200F5495F /* linkSpriteSheet.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = linkSpriteSheet.bmp; sourceTree = "<group>"; };
+		196B9D241E5496F200F5495F /* water.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = water.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +104,7 @@
 		1908B83E1E4CB814006C895B /* G53GRA.Framework */ = {
 			isa = PBXGroup;
 			children = (
+				196B9D221E5496CE00F5495F /* Textures */,
 				192BE3B31E4CBD3B0040131F /* Framework */,
 				192BE3B21E4CBD290040131F /* Code */,
 			);
@@ -101,6 +123,16 @@
 		192BE3B21E4CBD290040131F /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				196B9D191E54961900F5495F /* SunLight.cpp */,
+				196B9D1A1E54961900F5495F /* SunLight.h */,
+				196B9D1B1E54961900F5495F /* TexturedCube.cpp */,
+				196B9D1C1E54961900F5495F /* TexturedCube.h */,
+				196B9D1D1E54961900F5495F /* Water.cpp */,
+				196B9D1E1E54961900F5495F /* Water.h */,
+				196B9D151E54960F00F5495F /* Floor.h */,
+				196B9D161E54960F00F5495F /* Link.cpp */,
+				196B9D171E54960F00F5495F /* Link.h */,
+				196B9D131E54960500F5495F /* Floor.cpp */,
 				192BE3C71E4CBD960040131F /* main.cpp */,
 				192BE3C81E4CBD960040131F /* MyScene.cpp */,
 				192BE3C91E4CBD960040131F /* MyScene.h */,
@@ -149,6 +181,15 @@
 				192BE3BA1E4CBD650040131F /* Scene.h */,
 			);
 			name = Engine;
+			sourceTree = "<group>";
+		};
+		196B9D221E5496CE00F5495F /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				196B9D231E5496F200F5495F /* linkSpriteSheet.bmp */,
+				196B9D241E5496F200F5495F /* water.bmp */,
+			);
+			name = Textures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,11 +250,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				192BE3BC1E4CBD650040131F /* Scene.cpp in Sources */,
+				196B9D141E54960500F5495F /* Floor.cpp in Sources */,
 				192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */,
 				192BE3C51E4CBD8B0040131F /* Camera.cpp in Sources */,
+				196B9D211E54961900F5495F /* Water.cpp in Sources */,
 				192BE3CA1E4CBD960040131F /* main.cpp in Sources */,
 				192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */,
+				196B9D1F1E54961900F5495F /* SunLight.cpp in Sources */,
+				196B9D201E54961900F5495F /* TexturedCube.cpp in Sources */,
 				192BE3BB1E4CBD650040131F /* Engine.cpp in Sources */,
+				196B9D181E54960F00F5495F /* Link.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
