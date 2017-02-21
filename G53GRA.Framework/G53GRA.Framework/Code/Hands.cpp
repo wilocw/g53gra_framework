@@ -355,15 +355,15 @@ void Hands::Update(const double& deltaTime)
 	// is active for 1 second, the entire time it takes to flex or stretch a finger.
 
 	//  Keyframe    Animation State
-	// .––––,
-	// ¦ .––0	    Start of animation (Fingers stretched)
-	// ¦ '–>1––.    Flex thumb 
-	// ¦ .––2<–'    Flex index finger
-	// ¦ '–>3––.    Flex middle finger
-	// ¦ .––4<–'    Flex ring finger
-	// ¦ '–>5––.    Flex little finger
-	// '–.––6<–|    Stretch all fingers
-	//   '–>7––'    Flex all fingers
+	// .----,
+	// ¦ .--0	    Start of animation (Fingers stretched)
+	// ¦ '->1--.    Flex thumb 
+	// ¦ .--2<-'    Flex index finger
+	// ¦ '->3--.    Flex middle finger
+	// ¦ .--4<-'    Flex ring finger
+	// ¦ '->5--.    Flex little finger
+	// '-.--6<-|    Stretch all fingers
+	//   '->7--'    Flex all fingers
 
 
 	// check if we hit the end of the animation (8 seconds), if so reset
