@@ -364,7 +364,6 @@ void Hands::Update(const double& deltaTime)
 	// ¦ '–>5––.    Flex little finger
 	// '–.––6<–|    Stretch all fingers
 	//   '–>7––'    Flex all fingers
-	//
 
 
 	// check if we hit the end of the animation (8 seconds), if so reset
