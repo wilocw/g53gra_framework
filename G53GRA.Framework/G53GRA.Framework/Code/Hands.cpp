@@ -230,7 +230,7 @@ void Hands::Skeleton()
 	glPushMatrix();
 		// Translate to base of MIDDLE FINGER
 		glTranslatef(-0.05f, 2.5f, 0.0f);
-		SkeletonFinger(_FINGER_RING);
+		SkeletonFinger(_FINGER_MIDDLE);
 	// Pop MODELVIEW matrix to revert to base of palm
 	glPopMatrix();
 	// Create fourth line from base of palm to base of fourth finger
@@ -356,12 +356,12 @@ void Hands::Update(const double& deltaTime)
 
 	//  Keyframe    Animation State
 	// .----,
-	// ¦ .--0	    Start of animation (Fingers stretched)
-	// ¦ '->1--.    Flex thumb 
-	// ¦ .--2<-'    Flex index finger
-	// ¦ '->3--.    Flex middle finger
-	// ¦ .--4<-'    Flex ring finger
-	// ¦ '->5--.    Flex little finger
+	// | .--0	    Start of animation (Fingers stretched)
+	// | '->1--.    Flex thumb
+	// | .--2<-'    Flex index finger
+	// | '->3--.    Flex middle finger
+	// | .--4<-'    Flex ring finger
+	// | '->5--.    Flex little finger
 	// '-.--6<-|    Stretch all fingers
 	//   '->7--'    Flex all fingers
 
