@@ -164,9 +164,11 @@ void TexturedSphere::HandleKey(unsigned char key, int state, int mx, int my)
 		ToggleWireFrame();
 		break;
 	case '-':
-		_resolution = _resolution > 1 ? _resolution - 1 : 1;
+		if (_resolution > 1) --_resolution;
 		break;
 	case '+':
-		_resolution++;
+		if (_resolution < _MAX_RES) ++_resolution;
+	case 'i':
+		break;
 	}
 }

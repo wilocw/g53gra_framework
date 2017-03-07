@@ -14,6 +14,7 @@
 #define _VERTEX3 9
 #define _VERTEX4 12
 #define _VERTEX5 15
+#define _MAX_RES 7
 
 class TexturedSphere :
 	public DisplayableObject,
