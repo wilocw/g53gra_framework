@@ -13,6 +13,7 @@
     <ClCompile Include="Framework\Engine\Scene.cpp" />
     <ClCompile Include="Framework\Utility\Camera.cpp" />
     <ClCompile Include="Framework\Utility\Texture.cpp" />
+    <ClCompile Include="Code\TexturedSphere.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\MyScene.h" />
@@ -24,6 +25,7 @@
     <ClInclude Include="Framework\Utility\Camera.h" />
     <ClInclude Include="Framework\Utility\Texture.h" />
     <ClInclude Include="Framework\Utility\VectorMath.h" />
+    <ClInclude Include="Code\TexturedSphere.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CE3A8304-475E-425E-BA11-FDAA6293C905}</ProjectGuid>
