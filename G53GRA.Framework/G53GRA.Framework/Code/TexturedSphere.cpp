@@ -108,13 +108,13 @@ void TexturedSphere::DrawFace(float *a, float *b, float *c)
 
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
-	float sa = 0.5f + atan2f(a[2], a[0]) / (2.0f*M_PI);
+	float sa = 0.5f - atan2f(a[2], a[0]) / (2.0f*M_PI);
 	float ta = 0.5f + asinf(a[1]) / M_PI;
 	
-	float sb = 0.5f + atan2f(b[2], b[0]) / (2.0f*M_PI);
+	float sb = 0.5f - atan2f(b[2], b[0]) / (2.0f*M_PI);
 	float tb = 0.5f + asinf(b[1]) / M_PI;
 
-	float sc = 0.5f + atan2f(c[2], c[0]) / (2.0f*M_PI);
+	float sc = 0.5f - atan2f(c[2], c[0]) / (2.0f*M_PI);
 	float tc = 0.5f + asinf(c[1]) / M_PI;
 
 	FixSeam(sa, sb, sc);
