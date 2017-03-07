@@ -7,6 +7,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Code\BlendedSphere.cpp" />
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\MyScene.cpp" />
     <ClCompile Include="Framework\Engine\Engine.cpp" />
@@ -16,6 +17,7 @@
     <ClCompile Include="Code\TexturedSphere.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\BlendedSphere.h" />
     <ClInclude Include="Code\MyScene.h" />
     <ClInclude Include="Framework\Engine\Engine.h" />
     <ClInclude Include="Framework\Engine\Scene.h" />

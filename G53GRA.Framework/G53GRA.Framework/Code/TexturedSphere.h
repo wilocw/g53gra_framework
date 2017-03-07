@@ -28,6 +28,7 @@ class TexturedSphere :
 	public Input
 {
 public:
+	TexturedSphere();
 	TexturedSphere(const std::string& filename);
 	~TexturedSphere();
 	
@@ -41,7 +42,8 @@ public:
 	inline void ToggleWireFrame() { _flagWireFrame = !_flagWireFrame; }
 	// Toggle rotation animation
 	inline void ToggleAnimation() { _flagAnimation = !_flagAnimation; }
-private:
+
+protected:
 	void DrawSphere();
 	void SubDivide(int p_recurse, float *a, float *b, float *c);
 	void DrawFace(float *a, float *b, float *c);

@@ -1,5 +1,5 @@
 #include "MyScene.h"
-#include "TexturedSphere.h"
+#include "BlendedSphere.h"
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight)
@@ -11,7 +11,7 @@ void MyScene::Initialise()
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-	TexturedSphere *ts = new TexturedSphere("./Textures/full_map_surface.bmp");
+	TexturedSphere *ts = new BlendedSphere("./Textures/alpha_map.bmp","./Textures/alpha_clouds.bmp");
 	ts->size(100.0f);
 	ts->SetResolution(5);
 
