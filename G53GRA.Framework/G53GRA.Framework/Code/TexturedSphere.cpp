@@ -168,7 +168,6 @@ void TexturedSphere::HandleKey(unsigned char key, int state, int mx, int my)
 		break;
 	case '+':
 		if (_resolution < _MAX_RES) ++_resolution;
-	case 'i':
 		break;
 	}
 }
