@@ -1,12 +1,10 @@
 #include "TexturedSphere.h"
 #include "VectorMath.h"
 
-TexturedSphere::TexturedSphere(const std::string& filename)
-	: _resolution(4), _flagWireFrame(false), _flagAnimation(true)
+// Default Constructor
+TexturedSphere::TexturedSphere()
+	: _resolution(4), _flagWireFrame(false), _flagAnimation(true), _texID(NULL)
 {
-	// Load texture using the provided Texture loader (.bmp only)
-	_texID = Scene::GetTexture(filename);
-	
 	// Octahedron vertices (used for initial triangle faces)
 	static float vertices[] = 
 	{
@@ -21,9 +19,16 @@ TexturedSphere::TexturedSphere(const std::string& filename)
 	_initV = vertices;
 }
 
-TexturedSphere::~TexturedSphere()
+// Constructor with Texture filename
+TexturedSphere::TexturedSphere(const std::string& filename) : TexturedSphere()
 {
+	SetTexture(filename);
+}
 
+void TexturedSphere::SetTexture(const std::string& filename)
+{
+	// Load texture using the provided Texture loader (.bmp only)
+	_texID = Scene::GetTexture(filename);
 }
 
 void TexturedSphere::Display()
