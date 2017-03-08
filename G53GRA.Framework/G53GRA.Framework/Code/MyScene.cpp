@@ -7,8 +7,7 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
 
 void MyScene::Initialise()
 {
-	// set the background colour of the scene to black
-	glClearColor(static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(0.0f), static_cast<GLclampf>(1.0f));
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 	// Create a new triforce object and add it to the list of objects
 	Triforce *t = new Triforce();
@@ -18,6 +17,6 @@ void MyScene::Initialise()
 /// set the perspective of camera
 void MyScene::Projection()
 {
-	gluPerspective(static_cast<GLdouble>(60.0), static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight),
-				   static_cast<GLdouble>(1.0), static_cast<GLdouble>(1000.0));
+    GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
+	gluPerspective(60.0, aspect, 1.0, 1000.0);
 }
