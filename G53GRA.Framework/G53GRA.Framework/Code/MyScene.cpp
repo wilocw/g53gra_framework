@@ -12,7 +12,6 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
 void MyScene::Initialise()
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
 	// DEMO 3 (Demos/Solar System)
 	// create and add a new triangle to the scene
 	Planet *sun = new Planet(30.0, 0.0f, 12.0f, 0.0f);
