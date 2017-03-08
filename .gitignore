@@ -8,6 +8,13 @@
 # Build results
 *.exe
 
+# XCode files
+xcuserdata/
+profile/
+*.xcworkspace
+*.pbxuser
+
+
 #[Dd]ebug/
 [Rr]elease/
 x64/
@@ -44,6 +51,7 @@ build/
 .builds
 *.pidb
 *.log
+*.svclog
 *.scc
 
 # Visual C++ cache files
@@ -51,13 +59,18 @@ ipch/
 *.aps
 *.ncb
 *.opensdf
+*.opendb
+*.idb
 *.sdf
 *.cachefile
+*.VC.db
+*.VC.VC.opendb
 
 # Visual Studio profiler
 *.psess
 *.vsp
 *.vspx
+*.sap
 
 # Guidance Automation Toolkit
 *.gpState
