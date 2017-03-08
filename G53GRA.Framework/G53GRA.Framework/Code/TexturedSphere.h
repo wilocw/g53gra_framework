@@ -30,11 +30,13 @@ class TexturedSphere :
 public:
 	TexturedSphere();
 	TexturedSphere(const std::string& filename);
-	~TexturedSphere();
+	~TexturedSphere(){}
 	
 	void Display();
 	void Update(const double& deltaTime);
 	void HandleKey(unsigned char key, int state, int mx, int my);
+
+	void SetTexture(const std::string& filename);
 
 	// Manually set resolution
 	inline void SetResolution(int r) { _resolution = r; }

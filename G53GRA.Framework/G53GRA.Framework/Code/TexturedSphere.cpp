@@ -1,8 +1,9 @@
 #include "TexturedSphere.h"
 #include "VectorMath.h"
 
+// Default Constructor
 TexturedSphere::TexturedSphere()
-	: _resolution(4), _flagWireFrame(false), _flagAnimation(true)
+	: _resolution(4), _flagWireFrame(false), _flagAnimation(true), _texID(NULL)
 {
 	// Octahedron vertices (used for initial triangle faces)
 	static float vertices[] =
@@ -18,16 +19,16 @@ TexturedSphere::TexturedSphere()
 	_initV = vertices;
 }
 
-TexturedSphere::TexturedSphere(const std::string& filename)	: TexturedSphere()
+// Constructor with Texture filename
+TexturedSphere::TexturedSphere(const std::string& filename) : TexturedSphere()
+{
+	SetTexture(filename);
+}
+
+void TexturedSphere::SetTexture(const std::string& filename)
 {
 	// Load texture using the provided Texture loader (.bmp only)
 	_texID = Scene::GetTexture(filename);
-
-}
-
-TexturedSphere::~TexturedSphere()
-{
-
 }
 
 void TexturedSphere::Display()
@@ -209,8 +210,9 @@ void TexturedSphere::HandleKey(unsigned char key, int state, int mx, int my)
 	case '-':
 		if (_resolution > 1) --_resolution;
 		break;
-	// Press '+' to increment the number of subdivisions (max 7)
+	// Press '+'(or '=') to increment the number of subdivisions (max 7)
 	case '+':
+    case '=':
 		if (_resolution < _MAX_RES) ++_resolution;
 		break;
 	}
