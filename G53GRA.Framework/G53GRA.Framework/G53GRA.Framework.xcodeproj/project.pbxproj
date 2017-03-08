@@ -87,6 +87,7 @@
 		1908B83E1E4CB814006C895B /* G53GRA.Framework */ = {
 			isa = PBXGroup;
 			children = (
+				19968D6C1E54B35000540281 /* Textures */,
 				192BE3B31E4CBD3B0040131F /* Framework */,
 				192BE3B21E4CBD290040131F /* Code */,
 			);
@@ -156,6 +157,13 @@
 				192BE3BA1E4CBD650040131F /* Scene.h */,
 			);
 			name = Engine;
+			sourceTree = "<group>";
+		};
+		19968D6C1E54B35000540281 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Textures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
