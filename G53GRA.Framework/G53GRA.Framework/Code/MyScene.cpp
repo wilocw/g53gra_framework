@@ -11,7 +11,11 @@ void MyScene::Initialise()
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-	TexturedSphere *ts = new TexturedSphere("./Textures/full_map_surface.bmp");
+#ifdef __APPLE__
+    TexturedSphere *ts = new TexturedSphere("./full_map_surface.bmp");
+#else
+    TexturedSphere *ts = new TexturedSphere("./Textures/full_map_surface.bmp");
+#endif
 	ts->size(100.0f);
 	ts->SetResolution(5);
 

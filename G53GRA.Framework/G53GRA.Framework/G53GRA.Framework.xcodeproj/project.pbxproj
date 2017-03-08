@@ -15,17 +15,20 @@
 		192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C21E4CBD8B0040131F /* Texture.cpp */; };
 		192BE3CA1E4CBD960040131F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C71E4CBD960040131F /* main.cpp */; };
 		192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C81E4CBD960040131F /* MyScene.cpp */; };
+		19EF20881E7011A3002245C0 /* TexturedSphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19EF20861E7011A3002245C0 /* TexturedSphere.cpp */; };
+		19EF208A1E70124B002245C0 /* full_map_surface.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19EF20891E7011B1002245C0 /* full_map_surface.bmp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1908B83A1E4CB814006C895B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = .;
+			dstSubfolderSpec = 7;
 			files = (
+				19EF208A1E70124B002245C0 /* full_map_surface.bmp in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -48,6 +51,9 @@
 		192BE3C71E4CBD960040131F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Code/main.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C81E4CBD960040131F /* MyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyScene.cpp; path = Code/MyScene.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C91E4CBD960040131F /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyScene.h; path = Code/MyScene.h; sourceTree = SOURCE_ROOT; };
+		19EF20861E7011A3002245C0 /* TexturedSphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TexturedSphere.cpp; path = Code/TexturedSphere.cpp; sourceTree = SOURCE_ROOT; };
+		19EF20871E7011A3002245C0 /* TexturedSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TexturedSphere.h; path = Code/TexturedSphere.h; sourceTree = SOURCE_ROOT; };
+		19EF20891E7011B1002245C0 /* full_map_surface.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = full_map_surface.bmp; path = Textures/full_map_surface.bmp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,8 @@
 		192BE3B21E4CBD290040131F /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				19EF20861E7011A3002245C0 /* TexturedSphere.cpp */,
+				19EF20871E7011A3002245C0 /* TexturedSphere.h */,
 				192BE3C71E4CBD960040131F /* main.cpp */,
 				192BE3C81E4CBD960040131F /* MyScene.cpp */,
 				192BE3C91E4CBD960040131F /* MyScene.h */,
@@ -155,6 +163,7 @@
 		19968D6C1E54B35000540281 /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				19EF20891E7011B1002245C0 /* full_map_surface.bmp */,
 			);
 			name = Textures;
 			sourceTree = "<group>";
@@ -218,6 +227,7 @@
 			files = (
 				192BE3BC1E4CBD650040131F /* Scene.cpp in Sources */,
 				192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */,
+				19EF20881E7011A3002245C0 /* TexturedSphere.cpp in Sources */,
 				192BE3C51E4CBD8B0040131F /* Camera.cpp in Sources */,
 				192BE3CA1E4CBD960040131F /* main.cpp in Sources */,
 				192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */,

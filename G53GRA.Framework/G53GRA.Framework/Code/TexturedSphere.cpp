@@ -210,8 +210,9 @@ void TexturedSphere::HandleKey(unsigned char key, int state, int mx, int my)
 	case '-':
 		if (_resolution > 1) --_resolution;
 		break;
-	// Press '+' to increment the number of subdivisions (max 7)
+	// Press '+'(or '=') to increment the number of subdivisions (max 7)
 	case '+':
+    case '=':
 		if (_resolution < _MAX_RES) ++_resolution;
 		break;
 	}
