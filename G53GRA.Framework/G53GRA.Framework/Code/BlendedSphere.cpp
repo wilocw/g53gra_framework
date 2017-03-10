@@ -39,6 +39,9 @@ void BlendedSphere::Display()
 	// Render sphere
 	DrawSphere();
 
+	glScalef(1.001f, 1.001f, 1.001f);
+	glRotatef(-15.0f, 0.0f, 1.0f, 0.0f);
+
 	glBindTexture(GL_TEXTURE_2D, _cloudID);
 	DrawSphere();
 
