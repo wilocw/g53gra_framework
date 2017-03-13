@@ -9,8 +9,5 @@ public:
 	~Floor(){};
 
 	void Display();
-
-private:
-	int texId;
 };
 
