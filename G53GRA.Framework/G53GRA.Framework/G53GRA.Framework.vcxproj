@@ -8,8 +8,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Floor.cpp" />
-    <ClCompile Include="Code\Light.cpp" />
     <ClCompile Include="Code\main.cpp" />
+    <ClCompile Include="Code\MultiLight.cpp" />
     <ClCompile Include="Code\MyScene.cpp" />
     <ClCompile Include="Code\Teapot.cpp" />
     <ClCompile Include="Framework\Engine\Engine.cpp" />
@@ -19,7 +19,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\Floor.h" />
-    <ClInclude Include="Code\Light.h" />
+    <ClInclude Include="Code\MultiLight.h" />
     <ClInclude Include="Code\MyScene.h" />
     <ClInclude Include="Code\Teapot.h" />
     <ClInclude Include="Framework\Engine\Engine.h" />

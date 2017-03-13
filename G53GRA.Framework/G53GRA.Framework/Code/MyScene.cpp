@@ -2,7 +2,7 @@
 
 #include "Floor.h"
 #include "Teapot.h"
-#include "Light.h"
+#include "MultiLight.h"
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight)
@@ -20,7 +20,7 @@ void MyScene::Initialise()
 	Teapot *t = new Teapot();
 	t->size(100.0f);
 
-	Light *l = new Light();
+	MultiLight *l = new MultiLight();
 
 	AddObjectToScene(f);
 	AddObjectToScene(t);

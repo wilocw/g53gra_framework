@@ -39,7 +39,7 @@
     <ClCompile Include="Code\Teapot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Code\Light.cpp">
+    <ClCompile Include="Code\MultiLight.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,7 +77,7 @@
     <ClInclude Include="Code\Teapot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Code\Light.h">
+    <ClInclude Include="Code\MultiLight.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
