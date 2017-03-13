@@ -12,7 +12,6 @@
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\MyScene.cpp" />
     <ClCompile Include="Code\SunLight.cpp" />
-    <ClCompile Include="Code\TexturedCube.cpp" />
     <ClCompile Include="Code\Water.cpp" />
     <ClCompile Include="Framework\Engine\Engine.cpp" />
     <ClCompile Include="Framework\Engine\Scene.cpp" />
@@ -24,7 +23,6 @@
     <ClInclude Include="Code\Link.h" />
     <ClInclude Include="Code\MyScene.h" />
     <ClInclude Include="Code\SunLight.h" />
-    <ClInclude Include="Code\TexturedCube.h" />
     <ClInclude Include="Code\Water.h" />
     <ClInclude Include="Framework\Engine\Engine.h" />
     <ClInclude Include="Framework\Engine\Scene.h" />

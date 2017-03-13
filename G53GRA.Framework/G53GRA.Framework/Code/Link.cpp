@@ -2,7 +2,7 @@
 
 
 Link::Link(const float& width, const float& height, const std::string& filename)
-	: width(width), height(height), time(0.0), runAnimate(true), dx(0.1f)
+	: width(width), height(height), time(0.0), runAnimate(true), dx(4.0f)
 {
 	texID = Scene::GetTexture(filename);
 
@@ -53,7 +53,7 @@ void Link::Update(const double& deltaTime)
 
 	if (runAnimate)
 	{
-		pos[0] += scale[0]*dx;
+		pos[0] += (1.0f + scale[0])*dx*static_cast<float>(deltaTime);
 		if (pos[0] > scale[0]*20.0f || pos[0] < -scale[0]*20.0f)
 			dx = -dx;
 
@@ -90,10 +90,10 @@ void Link::Update(const double& deltaTime)
 
 void Link::HandleKey(unsigned char key, int state, int x, int y)
 {
-	if (key == 'r' && state) // 'r' key pressed: pause/unpause animation
+	if (key == 'x' && state) // 'r' key pressed: pause/unpause animation
 	{
 		runAnimate = !runAnimate;
-		if (runAnimate) spriteFrame = 0;
+		if (!runAnimate) spriteFrame = 0;
 	}
 }
 
