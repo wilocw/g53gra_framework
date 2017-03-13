@@ -96,13 +96,13 @@ void TexturedSphere::SubDivide(int recurse_idx, float *a, float *b, float *c)
 	if (recurse_idx > 1)
 	{
 		/*
-		      a						 a
-			 /\  					 /\
-		    /  \ 				 ca	/__\ ab
-		   /    \       --->       /\  /\
-	    c /______\ b			c /__\/__\ b
-								     bc	
-		*/
+              a                      a
+             /\                      /\
+            /  \                 ca /__\ ab
+           /    \       --->       /\  /\
+        c /______\ b            c /__\/__\ b
+                                     bc    
+        */
 		SubDivide(recurse_idx - 1, a, ab, ca);
 		SubDivide(recurse_idx - 1, ab, b, bc);
 		SubDivide(recurse_idx - 1, ca, bc, c);
@@ -112,13 +112,13 @@ void TexturedSphere::SubDivide(int recurse_idx, float *a, float *b, float *c)
 	else
 	{
 		/*
-		     a
-			 /\
-		ca	/__\ ab
-		   /\  /\
-	    c /__\/__\ b
-			 bc	
-		*/
+             a
+             /\
+        ca  /__\ ab
+           /\  /\
+        c /__\/__\ b
+             bc    
+        */
 		DrawFace(a, ab, ca);
 		DrawFace(ab, b, bc);
 		DrawFace(ca, bc, c);
