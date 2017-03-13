@@ -131,8 +131,12 @@ void TexturedSphere::DrawFace(float *a, float *b, float *c)
     //  a[0], a[1], and a[2] are the X, Y and Z values of the normal (so too for b and c)
     // atan2 is used to convert that to an angle, which is between -PI and PI. divide it 
     // by 2PI to restrict it to between -0.5 and 0.5. add 0.5 to make it range from 0 to 1
-    // to get the (s) values in the texture map.    
-
+    // to get the (s) values in the texture map.
+	//
+	// asin gives the angle between the vector and the X/Z plane. This will give a value
+	// from -PI/2 (-90 degrees) to PI/2 (90 degrees). Divide by PI to cap between -0.5
+	// and 0.5, then add 0.5 to scale from 0 to 1 to get the (t) value in the texture map.
+	
     // Index texture coordinate (s,t) for vertex a (convert to angle and index between 0 and 1)
 	float sa = 0.5f + atan2f(a[0], a[2]) / (2.0f*M_PI);
     float ta = 0.5f + asinf(a[1]) / M_PI;
