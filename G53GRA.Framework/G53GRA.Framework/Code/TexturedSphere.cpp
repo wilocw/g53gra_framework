@@ -155,10 +155,10 @@ void TexturedSphere::DrawFace(float *a, float *b, float *c)
         glNormal3fv(a); glVertex3fv(a);
     // vertex b
         glTexCoord2f(sb, tb);
-        glNormal3fv(b);    glVertex3fv(b);
+        glNormal3fv(b); glVertex3fv(b);
     // vertex c
         glTexCoord2f(sc, tc);
-        glNormal3fv(c);    glVertex3fv(c);
+        glNormal3fv(c); glVertex3fv(c);
     glEnd();
 }
 
