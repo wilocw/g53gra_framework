@@ -15,6 +15,9 @@
 		192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C21E4CBD8B0040131F /* Texture.cpp */; };
 		192BE3CA1E4CBD960040131F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C71E4CBD960040131F /* main.cpp */; };
 		192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C81E4CBD960040131F /* MyScene.cpp */; };
+		19E9F9181E7981ED00803A1D /* Floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F9121E7981ED00803A1D /* Floor.cpp */; };
+		19E9F9191E7981ED00803A1D /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F9141E7981ED00803A1D /* Light.cpp */; };
+		19E9F91A1E7981ED00803A1D /* Teapot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F9161E7981ED00803A1D /* Teapot.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +51,12 @@
 		192BE3C71E4CBD960040131F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Code/main.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C81E4CBD960040131F /* MyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyScene.cpp; path = Code/MyScene.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C91E4CBD960040131F /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyScene.h; path = Code/MyScene.h; sourceTree = SOURCE_ROOT; };
+		19E9F9121E7981ED00803A1D /* Floor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Floor.cpp; path = Code/Floor.cpp; sourceTree = SOURCE_ROOT; };
+		19E9F9131E7981ED00803A1D /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Floor.h; path = Code/Floor.h; sourceTree = SOURCE_ROOT; };
+		19E9F9141E7981ED00803A1D /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Light.cpp; path = Code/Light.cpp; sourceTree = SOURCE_ROOT; };
+		19E9F9151E7981ED00803A1D /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Light.h; path = Code/Light.h; sourceTree = SOURCE_ROOT; };
+		19E9F9161E7981ED00803A1D /* Teapot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Teapot.cpp; path = Code/Teapot.cpp; sourceTree = SOURCE_ROOT; };
+		19E9F9171E7981ED00803A1D /* Teapot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Teapot.h; path = Code/Teapot.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +111,12 @@
 		192BE3B21E4CBD290040131F /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				19E9F9121E7981ED00803A1D /* Floor.cpp */,
+				19E9F9131E7981ED00803A1D /* Floor.h */,
+				19E9F9141E7981ED00803A1D /* Light.cpp */,
+				19E9F9151E7981ED00803A1D /* Light.h */,
+				19E9F9161E7981ED00803A1D /* Teapot.cpp */,
+				19E9F9171E7981ED00803A1D /* Teapot.h */,
 				192BE3C71E4CBD960040131F /* main.cpp */,
 				192BE3C81E4CBD960040131F /* MyScene.cpp */,
 				192BE3C91E4CBD960040131F /* MyScene.h */,
@@ -217,8 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				192BE3BC1E4CBD650040131F /* Scene.cpp in Sources */,
+				19E9F9181E7981ED00803A1D /* Floor.cpp in Sources */,
+				19E9F9191E7981ED00803A1D /* Light.cpp in Sources */,
 				192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */,
 				192BE3C51E4CBD8B0040131F /* Camera.cpp in Sources */,
+				19E9F91A1E7981ED00803A1D /* Teapot.cpp in Sources */,
 				192BE3CA1E4CBD960040131F /* main.cpp in Sources */,
 				192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */,
 				192BE3BB1E4CBD650040131F /* Engine.cpp in Sources */,

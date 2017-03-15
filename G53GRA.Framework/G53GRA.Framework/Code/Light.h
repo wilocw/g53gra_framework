@@ -4,6 +4,8 @@
 #include "Animation.h"
 #include "Input.h"
 
+#include <cmath>
+
 class Light :
 	public DisplayableObject,
 	public Animation,
