@@ -1,7 +1,7 @@
 #include "FaceCull.h"
 
 
-FaceCull::FaceCull() : _roty(0.0f), _flagCullFace(false)
+FaceCull::FaceCull() : _roty(0.0f), _flagCullFace(true)
 {
 }
 
@@ -21,8 +21,7 @@ void FaceCull::Display()
 	glScalef(scale[0], scale[1], scale[2]);
 
 	glRotatef(_roty, 0.0f, 1.0f, 0.0f);
-	printf("%5.3f\n",_roty);
-	glColor3f(0.5f, 0.5f, 0.5f);
+    glColor3f(0.5f, 0.5f, 0.5f);
 	glutSolidCube(5.0f);
 
 	glScalef(5.0f, 5.0f, 5.0f);
