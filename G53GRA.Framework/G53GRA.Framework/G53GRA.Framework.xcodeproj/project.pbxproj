@@ -15,17 +15,21 @@
 		192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C21E4CBD8B0040131F /* Texture.cpp */; };
 		192BE3CA1E4CBD960040131F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C71E4CBD960040131F /* main.cpp */; };
 		192BE3CB1E4CBD960040131F /* MyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 192BE3C81E4CBD960040131F /* MyScene.cpp */; };
+		196366071E79849400A73A73 /* TexturedCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 196366051E79849400A73A73 /* TexturedCube.cpp */; };
+		1963660B1E79855600A73A73 /* batmanlogo.bmp in Copy Files */ = {isa = PBXBuildFile; fileRef = 1963660A1E79854F00A73A73 /* batmanlogo.bmp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1908B83A1E4CB814006C895B /* CopyFiles */ = {
+		1908B83A1E4CB814006C895B /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = .;
+			dstSubfolderSpec = 7;
 			files = (
+				1963660B1E79855600A73A73 /* batmanlogo.bmp in Copy Files */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -48,6 +52,9 @@
 		192BE3C71E4CBD960040131F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Code/main.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C81E4CBD960040131F /* MyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyScene.cpp; path = Code/MyScene.cpp; sourceTree = SOURCE_ROOT; };
 		192BE3C91E4CBD960040131F /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyScene.h; path = Code/MyScene.h; sourceTree = SOURCE_ROOT; };
+		196366051E79849400A73A73 /* TexturedCube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TexturedCube.cpp; path = Code/TexturedCube.cpp; sourceTree = SOURCE_ROOT; };
+		196366061E79849400A73A73 /* TexturedCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TexturedCube.h; path = Code/TexturedCube.h; sourceTree = SOURCE_ROOT; };
+		1963660A1E79854F00A73A73 /* batmanlogo.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = batmanlogo.bmp; path = Textures/batmanlogo.bmp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +109,8 @@
 		192BE3B21E4CBD290040131F /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				196366051E79849400A73A73 /* TexturedCube.cpp */,
+				196366061E79849400A73A73 /* TexturedCube.h */,
 				192BE3C71E4CBD960040131F /* main.cpp */,
 				192BE3C81E4CBD960040131F /* MyScene.cpp */,
 				192BE3C91E4CBD960040131F /* MyScene.h */,
@@ -155,6 +164,7 @@
 		19968D6C1E54B35000540281 /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				1963660A1E79854F00A73A73 /* batmanlogo.bmp */,
 			);
 			name = Textures;
 			sourceTree = "<group>";
@@ -168,7 +178,7 @@
 			buildPhases = (
 				1908B8381E4CB814006C895B /* Sources */,
 				1908B8391E4CB814006C895B /* Frameworks */,
-				1908B83A1E4CB814006C895B /* CopyFiles */,
+				1908B83A1E4CB814006C895B /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -217,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				192BE3BC1E4CBD650040131F /* Scene.cpp in Sources */,
+				196366071E79849400A73A73 /* TexturedCube.cpp in Sources */,
 				192BE3C61E4CBD8B0040131F /* Texture.cpp in Sources */,
 				192BE3C51E4CBD8B0040131F /* Camera.cpp in Sources */,
 				192BE3CA1E4CBD960040131F /* main.cpp in Sources */,
