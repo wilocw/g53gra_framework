@@ -1,5 +1,6 @@
 #include "MultiLight.h"
 
+#include <cmath>
 
 MultiLight::MultiLight() :
 	_runtime(0.0), _radius(200.0), _flagVisualise(false),
