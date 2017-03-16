@@ -17,7 +17,7 @@ void MyScene::Initialise()
     TexturedSphere *ts = new TexturedSphere("./Textures/full_map_surface.bmp");
 #endif
 	ts->size(100.0f);
-	ts->SetResolution(5);
+	ts->SetResolution(0);
 
 	AddObjectToScene(ts);
 }

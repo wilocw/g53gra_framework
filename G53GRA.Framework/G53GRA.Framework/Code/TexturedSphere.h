@@ -39,7 +39,7 @@ public:
 	void SetTexture(const std::string& filename);
 
 	// Manually set resolution
-	inline void SetResolution(int r) { _resolution = r > 1 ? (r > _MAX_RES ? _MAX_RES : r) : 1; }
+	inline void SetResolution(int r) { _resolution = r >= 0 ? (r > _MAX_RES ? _MAX_RES : r) : 0; }
 	// Toggle wire frame model
 	inline void ToggleWireFrame() { _flagWireFrame = !_flagWireFrame; }
 	// Toggle rotation animation

@@ -68,39 +68,40 @@ void TexturedSphere::DrawSphere()
 {
     // Subdivide each face of an octohedron (_resolution = number of divisions)
     // and then render the final subdivisions of each face
-    // Top half
-    SubDivide(_resolution, &_initV[_VERTEX3], &_initV[_VERTEX0], &_initV[_VERTEX4]);
-    SubDivide(_resolution, &_initV[_VERTEX0], &_initV[_VERTEX1], &_initV[_VERTEX4]);
-    SubDivide(_resolution, &_initV[_VERTEX1], &_initV[_VERTEX2], &_initV[_VERTEX4]);
-    SubDivide(_resolution, &_initV[_VERTEX2], &_initV[_VERTEX3], &_initV[_VERTEX4]);
-    // Bottom half
-    SubDivide(_resolution, &_initV[_VERTEX0], &_initV[_VERTEX3], &_initV[_VERTEX5]);
-    SubDivide(_resolution, &_initV[_VERTEX1], &_initV[_VERTEX0], &_initV[_VERTEX5]);
-    SubDivide(_resolution, &_initV[_VERTEX2], &_initV[_VERTEX1], &_initV[_VERTEX5]);
-    SubDivide(_resolution, &_initV[_VERTEX3], &_initV[_VERTEX2], &_initV[_VERTEX5]);
+
+	// Top half
+	SubDivide(_resolution, &_initV[_VERTEX3], &_initV[_VERTEX0], &_initV[_VERTEX4]);
+	SubDivide(_resolution, &_initV[_VERTEX0], &_initV[_VERTEX1], &_initV[_VERTEX4]);
+	SubDivide(_resolution, &_initV[_VERTEX1], &_initV[_VERTEX2], &_initV[_VERTEX4]);
+	SubDivide(_resolution, &_initV[_VERTEX2], &_initV[_VERTEX3], &_initV[_VERTEX4]);
+	// Bottom half
+	SubDivide(_resolution, &_initV[_VERTEX0], &_initV[_VERTEX3], &_initV[_VERTEX5]);
+	SubDivide(_resolution, &_initV[_VERTEX1], &_initV[_VERTEX0], &_initV[_VERTEX5]);
+	SubDivide(_resolution, &_initV[_VERTEX2], &_initV[_VERTEX1], &_initV[_VERTEX5]);
+	SubDivide(_resolution, &_initV[_VERTEX3], &_initV[_VERTEX2], &_initV[_VERTEX5]);
 }
 
 void TexturedSphere::SubDivide(int recurse_idx, float *a, float *b, float *c)
-{
-    // Calcuate mid point between each pair of triangle vertices (a,b,c)
-    float ab[3] = { a[0] + b[0], a[1] + b[1], a[2] + b[2] };
-    float bc[3] = { b[0] + c[0], b[1] + c[1], b[2] + c[2] };
-    float ca[3] = { c[0] + a[0], c[1] + a[1], c[2] + a[2] };
-
-    // Normalise to vertices to have ||x|| = 1
-    norm(ab);
-    norm(bc);
-    norm(ca);
-    
+{ 
     // Recursively subdivide faces
-    if (recurse_idx > 1)
+    if (recurse_idx > 0)
     {
+		// Calcuate mid point between each pair of triangle vertices (a,b,c)
+		float ab[3] = { a[0] + b[0], a[1] + b[1], a[2] + b[2] };
+		float bc[3] = { b[0] + c[0], b[1] + c[1], b[2] + c[2] };
+		float ca[3] = { c[0] + a[0], c[1] + a[1], c[2] + a[2] };
+
+		// Normalise to vertices to have ||x|| = 1
+		norm(ab);
+		norm(bc);
+		norm(ca);
+
         /*
               a                      a
              /\                      /\
-            /  \                 ca /__\ ab
+            /  \                 ab /__\ ca
            /    \       --->       /\  /\
-        c /______\ b            c /__\/__\ b
+        b /______\ c            b /__\/__\ c
                                      bc    
         */
         SubDivide(recurse_idx - 1, a, ab, ca);
@@ -114,15 +115,12 @@ void TexturedSphere::SubDivide(int recurse_idx, float *a, float *b, float *c)
         /*
              a
              /\
-        ca  /__\ ab
-           /\  /\
-        c /__\/__\ b
-             bc    
+            /  \ 
+           /    \
+        b /______\ c
+                 
         */
-        DrawFace(a, ab, ca);
-        DrawFace(ab, b, bc);
-        DrawFace(ca, bc, c);
-        DrawFace(ca, ab, bc);
+		DrawFace(a, b, c);
     }
 }
 
@@ -212,7 +210,7 @@ void TexturedSphere::HandleKey(unsigned char key, int state, int mx, int my)
         break;
     // Press '-' to decrement the number of subdivisions (min 1)
     case '-':
-        if (_resolution > 1) --_resolution;
+        if (_resolution > 0) --_resolution;
         break;
     // Press '+'(or '=') to increment the number of subdivisions (max 7)
     case '+':
