@@ -63,10 +63,19 @@ void Light::Update(const double& deltaTime)
 	glLightfv(_lightSrc, GL_POSITION, _position);
 
 	// Fall off
+	
 	glLightf(_lightSrc, GL_CONSTANT_ATTENUATION, _c_falloff);
 	glLightf(_lightSrc, GL_LINEAR_ATTENUATION, _l_falloff);
 	glLightf(_lightSrc, GL_QUADRATIC_ATTENUATION, _q_falloff);
+	
 
+	/*
+	GLfloat spotdir[] = { 0.0f, 0.0f, -1.0f, 0.0f };
+
+	glLightfv(_lightSrc, GL_SPOT_DIRECTION, spotdir);
+	glLightf(_lightSrc, GL_SPOT_EXPONENT, 4.0f);
+	glLightf(_lightSrc, GL_SPOT_CUTOFF, 60.0f);
+	*/
 	glEnable(_lightSrc);
 }
 
