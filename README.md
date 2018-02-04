@@ -3,8 +3,7 @@
 #### Spring Semester 2016/17
 
 The documentation of this framework is covered _in full_ in the provided
-specification, available from
-[Moodle](http://moodle.nottingham.ac.uk/mod/resource/view.php?id=2404290). Note
+specification, available [here](doc.pdf). Note
 that the use of this framework is _optional_ and completely at your discretion,
 however you may find it easier tofocus on applying the computer graphics theory
 with all the windowing handled.
@@ -45,14 +44,13 @@ drive in `cmd` first.
 ```
 > H:
 > mkdir G53GRA & cd G53GRA
-> git clone https://projects.cs.nott.ac.uk/psxwowa/g53gra_framework.git
+> git clone https://github.com/wilocw/g53gra_framework/.git
 ```
-You will now be prompted for your username and password. You should enter for
-__IS login__ details -- this will allow you to `pull` from the repository. You
-should see:
+You should __not__ be prompted for a username or password. You
+should see something along the lines of:
 ```
 > git clone 
-https://projects.cs.nott.ac.uk/psxwowa/g53gra_framework.git
+https://github.com/wilocw/g53gra_framework/.git
 Cloning into 'g53gra_framework'...
 remote: Counting objects: 477, done.
 remote: Compressing objects: 100% (282/282), done.
