@@ -8,9 +8,6 @@ that the use of this framework is _optional_ and completely at your discretion,
 however you may find it easier tofocus on applying the computer graphics theory
 with all the windowing handled.
 
-A software document reference for the framework classes is also available
-[here](http://www.cs.nott.ac.uk/~psxwowa/framework/documentation).
-
 ## Overview
 The framework is cross-platform and uses OpenGL, (free)GLUT and GLU. Prebuilt
 and linked projects are available for use with Windows under Visual Studio and 
